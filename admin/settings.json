@@ -51,6 +51,292 @@
             "readonly": false
         }
     },
+    "course": {
+        "slug": "course",
+        "table": {
+            "name": "course",
+            "pk": "id",
+            "verbose": "course"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "INTEGER",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "school",
+                "verbose": "school",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "name",
+                "verbose": "name",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "price",
+                "verbose": "price",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "online",
+                "verbose": "online",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "url",
+                "verbose": "url",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "headline",
+                "verbose": "headline",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "description",
+                "verbose": "description",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "features",
+                "verbose": "features",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "level",
+                "verbose": "level",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false,
+            "oneToOne": {
+                "state_course": "course_id"
+            }
+        }
+    },
+    "gig": {
+        "slug": "gig",
+        "table": {
+            "name": "gig",
+            "pk": "id",
+            "verbose": "gig"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "INTEGER",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "title",
+                "verbose": "title",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "source",
+                "verbose": "source",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "snippet",
+                "verbose": "snippet",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "url",
+                "verbose": "url",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false,
+            "oneToOne": {
+                "state_gig": "gig_id"
+            }
+        }
+    },
     "school": {
         "slug": "school",
         "table": {
@@ -250,246 +536,11 @@
             }
         }
     },
-    "course": {
-        "slug": "course",
-        "table": {
-            "name": "course",
-            "pk": "id",
-            "verbose": "course"
-        },
-        "columns": [
-            {
-                "name": "id",
-                "verbose": "id",
-                "control": {
-                    "text": true
-                },
-                "type": "INTEGER",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "school",
-                "verbose": "school",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "name",
-                "verbose": "name",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "price",
-                "verbose": "price",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "online",
-                "verbose": "online",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "url",
-                "verbose": "url",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "headline",
-                "verbose": "headline",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "description",
-                "verbose": "description",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "features",
-                "verbose": "features",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "level",
-                "verbose": "level",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            }
-        ],
-        "mainview": {
-            "show": true
-        },
-        "listview": {
-            "order": {},
-            "page": 25
-        },
-        "editview": {
-            "readonly": false,
-            "oneToOne": {
-                "state_course": "course_id"
-            }
-        }
-    },
-    "state_gig": {
-        "slug": "state_gig",
-        "table": {
-            "name": "state_gig",
-            "pk": "",
-            "verbose": "state_gig"
-        },
-        "columns": [
-            {
-                "name": "state",
-                "verbose": "state",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "gig_id",
-                "verbose": "gig_id",
-                "control": {
-                    "text": true
-                },
-                "type": "INTEGER",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            }
-        ],
-        "mainview": {
-            "show": true
-        },
-        "listview": {
-            "order": {},
-            "page": 25
-        },
-        "editview": {
-            "readonly": false
-        }
-    },
     "state_school": {
         "slug": "state_school",
         "table": {
             "name": "state_school",
-            "pk": "",
+            "pk": "id",
             "verbose": "state_school"
         },
         "columns": [
@@ -524,6 +575,90 @@
                 "editview": {
                     "show": true
                 }
+            },
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "INTEGER",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "state_gig": {
+        "slug": "state_gig",
+        "table": {
+            "name": "state_gig",
+            "pk": "id",
+            "verbose": "state_gig"
+        },
+        "columns": [
+            {
+                "name": "state",
+                "verbose": "state",
+                "control": {
+                    "text": true
+                },
+                "type": "TEXT",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "gig_id",
+                "verbose": "gig_id",
+                "control": {
+                    "text": true
+                },
+                "type": "INTEGER",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "INTEGER",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
             }
         ],
         "mainview": {
@@ -541,7 +676,7 @@
         "slug": "state_course",
         "table": {
             "name": "state_course",
-            "pk": "",
+            "pk": "id",
             "verbose": "state_course"
         },
         "columns": [
@@ -576,27 +711,7 @@
                 "editview": {
                     "show": true
                 }
-            }
-        ],
-        "mainview": {
-            "show": true
-        },
-        "listview": {
-            "order": {},
-            "page": 25
-        },
-        "editview": {
-            "readonly": false
-        }
-    },
-    "gig": {
-        "slug": "gig",
-        "table": {
-            "name": "gig",
-            "pk": "id",
-            "verbose": "gig"
-        },
-        "columns": [
+            },
             {
                 "name": "id",
                 "verbose": "id",
@@ -612,70 +727,6 @@
                 "editview": {
                     "show": true
                 }
-            },
-            {
-                "name": "title",
-                "verbose": "title",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "source",
-                "verbose": "source",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "snippet",
-                "verbose": "snippet",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "url",
-                "verbose": "url",
-                "control": {
-                    "text": true
-                },
-                "type": "TEXT",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
             }
         ],
         "mainview": {
@@ -686,10 +737,7 @@
             "page": 25
         },
         "editview": {
-            "readonly": false,
-            "oneToOne": {
-                "state_gig": "gig_id"
-            }
+            "readonly": false
         }
     }
 }
