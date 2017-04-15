@@ -1,0 +1,11 @@
+{
+    "pilothound": {
+        "public": {
+            "local": {
+                "path": "./static",
+                "css": ["/admin.css"],
+                "js": []
+            }
+        }
+    }
+}

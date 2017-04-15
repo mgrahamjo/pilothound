@@ -1,0 +1,25 @@
+.navbar-brand {
+    visibility: hidden;
+}
+
+.navbar-brand::before {
+    content: 'PilotHound';
+    display: inline-block;
+    visibility: visible;
+}
+
+.nav .dropdown,
+footer {
+    display: none;
+}
+
+.x-table tbody td .glyphicon-plus {
+    float: right;
+    font-size: 14pt;
+    padding: 3px;
+}
+
+h2, .h2 {
+    font-size: 22px;
+    padding-bottom: 10px;
+}

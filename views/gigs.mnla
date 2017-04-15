@@ -1,0 +1,8 @@
+<:include inc/header:>
+<: gigs.forEach(gig => { :>
+    <a class="gig" href="<:gig.url:>">
+        <div class="gig-title" ><:gig.title:></div>
+        <p><::gig.snippet::></p>
+    </a>
+<: }) :>
+<:include inc/footer:>

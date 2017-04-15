@@ -1,0 +1,32 @@
+<:include inc/header:>
+<div class="hero light">
+    <h1>Launch your career as a Drone Pilot</h1>
+    <a class="btn">Find Work</a>
+    <a class="btn">Get Certified</a>
+</div>
+<div class="wrapper">
+    <div class="content clear">
+        <img class="usa" src="images/usa.png"/>
+        <h2>Drone gigs near you</h2>
+        <p>Select your state:</p>
+        <:include inc/select-state:>
+    </div>
+</div>
+<div class="wrapper light clear">
+    <div class="content clear">
+        <img class="right" src="images/email.png" width="200"/>
+        <h2 class="leads-h2">Get job leads in your inbox</h2>
+        <div class="input">
+            <input type="email" class="left" placeholder="your@email.address" required/>
+            <div class="btn left">Submit</div>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="content clear">
+        <h2>Become a Certified UAV Operator</h2>
+        <p>Select your state:</p>
+        <:include inc/select-state:>
+    </div>
+</div>
+<:include inc/footer:>

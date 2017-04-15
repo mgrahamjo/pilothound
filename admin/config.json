@@ -1,0 +1,14 @@
+{
+    "sqlite": {
+        "database": "../pilothound-db/pilothound.db"
+    },
+    "server": {
+        "port": 8001
+    },
+    "app": {
+        "layouts": true,
+        "themes": true,
+        "languages": false,
+        "root": "/admin"
+    }
+}

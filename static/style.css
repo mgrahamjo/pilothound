@@ -1,0 +1,187 @@
+body {
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    font-weight: 100;
+    background: #1f2123;
+}
+
+a {
+    text-decoration: none;
+    color: #fafbfd;
+}
+
+h1, h2, h3 {
+    font-weight: 100;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.light {
+    background-color: #fafbfd;
+    box-shadow: inset 0 0 150px #abb9bd;
+}
+
+.hero {
+    text-align: center;
+    width: 100%;
+    height: 350px;
+    top: 0;
+    padding-top: 10%;
+    background-image: url(images/drone.jpg);
+    background-repeat: no-repeat;
+    background-position: 10% 25%;
+    background-size: 18%;
+}
+
+.hero h1 {
+    margin-bottom: 3%;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+    background-color: #1f2123;
+    color: #fafbfd;
+}
+
+.logo {
+    display: inline-block;
+    background-color: #fafbfd;
+    width: 7px;
+    height: 17px;
+    transform: skewX(-20deg);
+    margin: 0 5px -2px 6px;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.logo::before {
+    display: inline-block;
+    content: '';
+    background-color: #fafbfd;
+    width: 3px;
+    height: 17px;
+    margin: 0 0 -1px -5px;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.header a {
+    padding: 12px;
+    transition: background-color 0.2s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.header a:hover {
+    background-color: #2eca99;
+    text-shadow: 1px 1px 0px #238e6c;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px;
+    background-color: #2eca99;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 0 4px;
+    color: #fafbfd;
+}
+
+.btn:hover {
+    background-color: #3be8b2;
+    text-shadow: 1px 1px 0px #2eca99;
+}
+
+.content {
+    color: #fafbfd;
+    max-width: 550px;
+    padding: 60px 20px;
+    margin: 0 auto;
+}
+
+.usa {
+    float: left;
+    margin-right: 34px;
+}
+
+select, input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    font-family: 'Exo 2';
+    font-size: 12pt;
+    font-weight: 100;
+    padding: 4px;
+    float: left;
+    padding: 11px;
+}
+
+.input {
+    box-shadow: 1px 1px 3px rgba(0,0,0,.15);
+    display: inline-block;
+    background: white;
+}
+
+input {
+    color: #95a1b2;
+    min-width: 182px;
+    border-bottom: 1px solid #fafbfd;
+}
+
+input + .btn,
+select + .btn {
+    margin: 0;
+}
+
+select {
+    cursor: pointer;
+}
+
+select:focus, input:focus {
+    outline: none;
+}
+
+.light .content {
+    color: #1f2123;
+}
+
+.go {
+    padding: 6px 8px;
+    border-radius: 2px;
+    background-color: #fafbfd;
+    color: #1f2123;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.leads-h2 {
+    margin: 44px 0 20px;
+}
+
+.gig {
+    background-color: white;
+    color: black;
+    padding: 20px 30px 10px;
+    max-width: 600px;
+    margin: 30px auto 0;
+    display: block;
+}
+
+.gig-title {
+    color: #2eca99;
+    font-weight: bold;
+}
