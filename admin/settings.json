@@ -229,7 +229,7 @@
         },
         "editview": {
             "readonly": false,
-            "oneToOne": {
+            "manyToOne": {
                 "state_course": "course_id"
             }
         }
@@ -332,7 +332,7 @@
         },
         "editview": {
             "readonly": false,
-            "oneToOne": {
+            "manyToOne": {
                 "state_gig": "gig_id"
             }
         }
@@ -531,7 +531,7 @@
         },
         "editview": {
             "readonly": false,
-            "oneToOne": {
+            "manyToOne": {
                 "state_school": "school_id"
             }
         }
@@ -544,6 +544,22 @@
             "verbose": "state_school"
         },
         "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "INTEGER",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
             {
                 "name": "state",
                 "verbose": "state",
@@ -563,22 +579,6 @@
             {
                 "name": "school_id",
                 "verbose": "school_id",
-                "control": {
-                    "text": true
-                },
-                "type": "INTEGER",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "id",
-                "verbose": "id",
                 "control": {
                     "text": true
                 },
@@ -613,6 +613,22 @@
         },
         "columns": [
             {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "INTEGER",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
                 "name": "state",
                 "verbose": "state",
                 "control": {
@@ -631,22 +647,6 @@
             {
                 "name": "gig_id",
                 "verbose": "gig_id",
-                "control": {
-                    "text": true
-                },
-                "type": "INTEGER",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "id",
-                "verbose": "id",
                 "control": {
                     "text": true
                 },
@@ -681,6 +681,22 @@
         },
         "columns": [
             {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "INTEGER",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
                 "name": "state",
                 "verbose": "state",
                 "control": {
@@ -699,22 +715,6 @@
             {
                 "name": "course_id",
                 "verbose": "course_id",
-                "control": {
-                    "text": true
-                },
-                "type": "INTEGER",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "id",
-                "verbose": "id",
                 "control": {
                     "text": true
                 },

@@ -1,5 +1,5 @@
 <div class="input">
-    <select>
+    <select class="select-state" onchange="saveStateSelection(event)">
         <option value="">- select a state-</option>
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>

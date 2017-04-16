@@ -27,3 +27,7 @@ h2, .h2 {
 #login {
     margin-top: 20px;
 }
+
+.alert {
+    margin: 20px auto 5px;
+}

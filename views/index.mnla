@@ -29,4 +29,6 @@
         <:include inc/select-state:>
     </div>
 </div>
+<script type="notjs" id="something"><::key::></script>
+<script src="app.js"></script>
 <:include inc/footer:>
