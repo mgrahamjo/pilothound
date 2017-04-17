@@ -31,3 +31,7 @@ h2, .h2 {
 .alert {
     margin: 20px auto 5px;
 }
+
+.alert-success {
+    margin: 20px auto;
+}

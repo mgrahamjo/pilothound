@@ -3,7 +3,7 @@
         "public": {
             "local": {
                 "path": "./static",
-                "css": ["/admin.css"],
+                "css": ["/css/admin.css"],
                 "js": []
             }
         }

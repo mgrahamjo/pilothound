@@ -1,9 +1,9 @@
 <footer class="header">
     <a href="/">PILOT HOUND</a>
     <div class="right">
-        <a class="nav" href="/gigs">Find Work</a>
-        <a class="nav" href="/courses">Get Certified</a>
-        <a class="nav" href="/shop">Drones &amp; Accessories</a>
+        <a class="nav" href="/drone-pilot-jobs">Jobs</a>
+        <a class="nav" href="/drone-license-classes">Training</a>
+        <a class="nav" href="/drones">Drones &amp; Parts</a>
         <a class="nav" href="/blog">Blog</a>
     </div>
 </footer>

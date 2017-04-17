@@ -34,6 +34,18 @@ function saveStateSelection(e) {
 
 }
 
+function goToGigs(e) {
+
+    window.location = `/drone-pilot-jobs/${e.target.previousElementSibling.value}`;
+
+}
+
+function fail() {
+
+    localStorage.setItem('state', 'n/a');
+
+}
+ 
 const state = localStorage.getItem('state');
 
 if (state !== 'n/a') {
@@ -61,16 +73,17 @@ if (state !== 'n/a') {
 
                     } else {
 
-                        localStorage.setItem('state', 'n/a');
+                        fail();
 
                     }
 
-                });
+                })
+                .catch(fail);
         });
 
     } else {
 
-        localStorage.setItem('state', 'n/a');
+        fail();
 
     }
 

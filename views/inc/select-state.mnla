@@ -55,5 +55,5 @@
         <option value="puerto rico">Puerto Rico</option>
         <option value="virgin">Virgin Islands</option>
     </select>
-    <div class="btn left">Go</div>
+    <div class="btn left" onclick="goToGigs(event)">Go</div>
 </div>

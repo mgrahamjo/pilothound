@@ -1,19 +1,25 @@
 const express = require('express'),
     app = express(),
     manila = require('manila')(),
-    db = require('sqlite'),
+    sqlite = require('sqlite'),
     gigs = require('./controllers/gigs'),
+    classes = require('./controllers/classes'),
     index = require('./controllers/index'),
     bodyParser = require('body-parser'),
-    expressAdmin = require('express-admin');
+    expressAdmin = require('express-admin'),
+    db = require('./util/db');
 
 const initApp = admin => {
+
+    db.init(sqlite);
 
     app.use('/admin', admin);
 
     app.get('/', (req, res) => index(res));
 
-    app.get('/gigs', (req, res) => gigs(res, db));
+    app.get('/drone-pilot-jobs/:state?', gigs);
+
+    app.get('/drone-license-classes/:state?', classes);
 
     app.use(express.static('static'));
 
@@ -53,4 +59,4 @@ const initAdmin = () => {
 
 };
 
-db.open('../pilothound-db/pilothound.db').then(initAdmin);
+sqlite.open('../pilothound-db/pilothound.db').then(initAdmin);

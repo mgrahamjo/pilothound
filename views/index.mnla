@@ -1,12 +1,12 @@
 <:include inc/header:>
 <div class="hero light">
     <h1>Launch your career as a Drone Pilot</h1>
-    <a class="btn">Find Work</a>
-    <a class="btn">Get Certified</a>
+    <a class="btn" href="/drone-pilot-jobs">Find Work</a>
+    <a class="btn" href="/drone-license-classes">Get Certified</a>
 </div>
 <div class="wrapper">
     <div class="content clear">
-        <img class="usa" src="images/usa.png"/>
+        <img class="usa" src="/images/usa.png"/>
         <h2>Drone gigs near you</h2>
         <p>Select your state:</p>
         <:include inc/select-state:>
@@ -14,7 +14,7 @@
 </div>
 <div class="wrapper light clear">
     <div class="content clear">
-        <img class="right" src="images/email.png" width="200"/>
+        <img class="right" src="/images/email.png" width="200"/>
         <h2 class="leads-h2">Get job leads in your inbox</h2>
         <div class="input">
             <input type="email" class="left" placeholder="your@email.address" required/>
@@ -30,5 +30,5 @@
     </div>
 </div>
 <script type="notjs" id="something"><::key::></script>
-<script src="app.js"></script>
+<script src="/js/app.js"></script>
 <:include inc/footer:>

@@ -39,7 +39,7 @@ h1, h2, h3 {
     height: 350px;
     top: 0;
     padding-top: 10%;
-    background-image: url(images/drone.jpg);
+    background-image: url(/images/drone.jpg);
     background-repeat: no-repeat;
     background-position: 10% 25%;
     background-size: 18%;
@@ -156,7 +156,7 @@ select:focus, input:focus {
     margin: 44px 0 20px;
 }
 
-.gig {
+.result {
     background-color: white;
     color: black;
     padding: 20px 30px 10px;
@@ -165,7 +165,22 @@ select:focus, input:focus {
     display: block;
 }
 
-.gig-title {
+.result-title {
     color: #2eca99;
+    font-weight: bold;
+    display: block;
+}
+
+.result-strong {
+    display: block;
+    color: #3db2d8;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.result-count {
+    background-color: #f3f3f3;
+    padding: 3px 6px;
+    font-size: 9pt;
     font-weight: bold;
 }

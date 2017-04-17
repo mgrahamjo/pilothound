@@ -41,7 +41,7 @@ function saveGigs() {
             VALUES (
                 "${escape(gig.title)}",
                 "${escape(gig.source)}",
-                "${escape(gig.snippet)}",
+                "${escape(gig.snippet.replace(/\\n/g, ''))}",
                 "${escape(gig.url)}");`
         ).then(() => 
 
@@ -87,7 +87,7 @@ function getGoogleGigs() {
                     title: gig.title,
                     source: 'Craigslist',
                     state: states[gig.displayLink.split('.')[0]],
-                    snippet: gig.snippet.replace('\n', ''),
+                    snippet: gig.snippet.replace(/\\n/g, ''),
                     url: gig.link
                 });
 

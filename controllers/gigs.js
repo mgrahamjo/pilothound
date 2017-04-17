@@ -1,9 +1,24 @@
-module.exports = (res, db) => {
+const db = require('../util/db');
 
-    db.exec('SELECT * FROM gigs LIMIT 20').then(gigs => 
+module.exports = (req, res) => {
 
-        res.render('index', {gigs})
+    const location = req.params.state ? ` in ${req.params.state}` : '';
 
-    );
+    const render = gigs => res.render('gigs', {
+        location,
+        slug: 'Drone Pilot Jobs' + location,
+        gigs: gigs.slice(0, 20), 
+        count: gigs.length
+    });
+
+    if (req.params.state) {
+
+        db.gigsInState(req.params.state).then(render);
+
+    } else {
+
+        db.gigs().then(render);
+
+    }
 
 };

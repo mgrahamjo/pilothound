@@ -1,8 +1,18 @@
 <:include inc/header:>
-<: gigs.forEach(gig => { :>
-    <a class="gig" href="<:gig.url:>">
-        <div class="gig-title" ><:gig.title:></div>
-        <p><::gig.snippet::></p>
-    </a>
-<: }) :>
+<div class="wrapper light">
+    <div class="content">
+
+        <h1>UAV Job Openings <:location:></h1>
+
+        <p class="result-count"><:count:> results</p>
+
+        <: gigs.forEach(gig => { :>
+            <div class="result">
+                <a href="<:gig.url:>" class="result-title" ><:gig.title:></a>
+                <p><::gig.snippet::></p>
+            </div>
+        <: }) :>
+        
+    </div>
+</div>
 <:include inc/footer:>
