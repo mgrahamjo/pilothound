@@ -3,7 +3,9 @@ const http = require('http');
 
 module.exports = (options, data) => {
 
-    options['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36';
+    options.headers = options.headers || {};
+
+    options.headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36';
 
     options.Connection = 'keep-alive';
 
@@ -12,6 +14,8 @@ module.exports = (options, data) => {
     delete options.https;
 
     return new Promise((resolve, reject) => {
+
+        console.log(`${options.method} ${options.host}${options.path}...`);
 
         const req = protocall.request(options, response => {
 
@@ -25,7 +29,15 @@ module.exports = (options, data) => {
 
                 console.log(`${response.statusCode}: ${response.statusMessage}`);
 
-                resolve(JSON.parse(body));
+                try {
+
+                    resolve(JSON.parse(body));
+
+                } catch (e) {
+
+                    resolve(body.toString());
+
+                }
 
             });
 
