@@ -5,7 +5,7 @@
         <h1>UAV Job Openings <:location:></h1>
 
         <p class="result-count clear">
-            <:start:> - <:start + 19:>
+            <:start:> - <:Math.min(start + 19, count):>
             <span class="right"><:count:> results</span>
         </p>
 

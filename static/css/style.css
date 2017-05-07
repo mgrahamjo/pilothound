@@ -209,13 +209,7 @@ select:focus, input:focus {
     text-align: center;
     transition: background-color 0.2s;
     text-shadow: 1px 1px #3fbb94;
-}
-
-.result-strong {
     display: block;
-    color: #3db2d8;
-    font-weight: bold;
-    margin-top: 8px;
 }
 
 .result-count {

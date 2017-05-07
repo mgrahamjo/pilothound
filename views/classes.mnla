@@ -9,7 +9,7 @@
         <: classes.local.forEach(course => { :>
             <div class="result">
                 <a target="_blank" href="<:course.url:>" class="result-title" ><:course.name:></a>
-                <a class="result-strong" href="/uav-schools/<:course.schoolId:>"><:course.school:></a>
+                <a class="result-source" href="/uav-schools/<:course.schoolId:>"><:course.school:></a>
                 <p><:course.headline:></p>
             </div>
         <: }) :>
@@ -19,7 +19,7 @@
         <: classes.online.forEach(course => { :>
             <div class="result">
                 <a target="_blank" href="<:course.url:>" class="result-title" ><:course.name:></a>
-                <a class="result-strong" href="/uav-schools/<:course.schoolId:>"><:course.school:></a>
+                <a class="result-source" href="/uav-schools/<:course.schoolId:>"><:course.school:></a>
                 <p><:course.headline:></p>
             </div>
         <: }) :>

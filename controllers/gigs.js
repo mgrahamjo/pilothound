@@ -2,7 +2,9 @@ const db = require('../util/db');
 
 module.exports = (req, res) => {
 
-    const page = req.query.page || 1;
+    const page = parseInt(req.query.page || 1);
+
+    const start = (page - 1) * 20;
 
     const location = req.params.state ? ` in ${req.params.state}` : '';
 
@@ -10,9 +12,9 @@ module.exports = (req, res) => {
         location,
         page,
         slug: 'Drone Pilot Jobs' + location,
-        gigs: gigs.slice(0, 20), 
+        gigs: gigs.slice(start, page * 20), 
         count: gigs.length,
-        start: page * 20 - 19,
+        start: start + 1,
         path: req.path
     });
 

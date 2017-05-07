@@ -1,15 +1,19 @@
-<div class="pagination">
+<: if (count > 20) { :>
 
-    <: if (page > 1) { :>
-        <a class="page prev" href="<:path:>?p=<:i-1:>">prev</a>
-    <: } :>
+    <div class="pagination">
 
-    <: for (let i = page; i * 20 - 20 < count && i < page + 4; i++) { :>
-        <a class="page<:i === page ? ' current' : '':>" href="<:path:>?p=<:i:>"><:i:></a>
-    <: } :>
+        <: if (page > 1) { :>
+            <a class="page prev" href="<:path:>?page=<:page-1:>">prev</a>
+        <: } :>
 
-    <: if (page * 20 < count) { :>
-        <a class="page next" href="<:path:>?p=<:i+1:>">next</a>
-    <: } :>
+        <: for (let i = page; (i * 20 - 19 <= count) && (i < page + 4); i++) { :>
+            <a class="page<:i === page ? ' current' : '':>" href="<:path:>?page=<:i:>"><:i:></a>
+        <: } :>
 
-</div>
+        <: if (page * 20 < count) { :>
+            <a class="page next" href="<:path:>?page=<:page+1:>">next</a>
+        <: } :>
+
+    </div>
+
+<: } :>
