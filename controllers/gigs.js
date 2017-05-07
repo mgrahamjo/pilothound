@@ -1,31 +1,10 @@
-const db = require('../util/db');
+const db = require('../util/db'),
+    controller = require('./base');
 
-module.exports = (req, res) => {
-
-    const page = parseInt(req.query.page || 1);
-
-    const start = (page - 1) * 20;
-
-    const location = req.params.state ? ` in ${req.params.state}` : '';
-
-    const render = gigs => res.render('gigs', {
-        location,
-        page,
-        slug: 'Drone Pilot Jobs' + location,
-        gigs: gigs.slice(start, page * 20), 
-        count: gigs.length,
-        start: start + 1,
-        path: req.path
-    });
-
-    if (req.params.state) {
-
-        db.gigsInState(req.params.state).then(render);
-
-    } else {
-
-        db.gigs().then(render);
-
-    }
-
-};
+module.exports = (req, res) => controller({
+    req,
+    res,
+    data: req.params.state ? () => db.gigsInState(req.params.state) : () => db.gigs(),
+    slug: req.params.state ? `Drone Pilot Jobs in ${req.params.state}` : 'All Drone Pilot Jobs',
+    view: 'gigs'
+});

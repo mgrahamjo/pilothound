@@ -3,7 +3,8 @@ const express = require('express'),
     manila = require('manila')(),
     sqlite = require('sqlite'),
     gigs = require('./controllers/gigs'),
-    classes = require('./controllers/classes'),
+    localClasses = require('./controllers/local-classes'),
+    onlineClasses = require('./controllers/online-classes'),
     index = require('./controllers/index'),
     bodyParser = require('body-parser'),
     expressAdmin = require('express-admin'),
@@ -19,7 +20,9 @@ const initApp = admin => {
 
     app.get('/drone-pilot-jobs/:state?', gigs);
 
-    app.get('/drone-license-classes/:state?', classes);
+    app.get('/drone-license-classes/:state?', localClasses);
+
+    app.get('/online-drone-classes', onlineClasses);
 
     app.use(express.static('static'));
 

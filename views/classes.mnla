@@ -2,11 +2,14 @@
 <div class="wrapper light">
     <div class="content">
 
-        <h1>UAV Pilot Training Courses <:location:></h1>
+        <h1><:slug:></h1>
 
-        <p class="result-count">In-person training: <:count.local:> programs <span class="right">Total results: <:count.total:></span></p>
+        <p class="result-count clear">
+            <:start:> - <:Math.min(start + 19, count):>
+            <span class="right"><:count:> results</span>
+        </p>
 
-        <: classes.local.forEach(course => { :>
+        <: items.forEach(course => { :>
             <div class="result">
                 <a target="_blank" href="<:course.url:>" class="result-title" ><:course.name:></a>
                 <a class="result-source" href="/uav-schools/<:course.schoolId:>"><:course.school:></a>
@@ -14,15 +17,7 @@
             </div>
         <: }) :>
 
-        <p class="result-count">Online courses: <:count.online:> results</p>
-
-        <: classes.online.forEach(course => { :>
-            <div class="result">
-                <a target="_blank" href="<:course.url:>" class="result-title" ><:course.name:></a>
-                <a class="result-source" href="/uav-schools/<:course.schoolId:>"><:course.school:></a>
-                <p><:course.headline:></p>
-            </div>
-        <: }) :>
+        <:include inc/pagination:>
         
     </div>
 </div>

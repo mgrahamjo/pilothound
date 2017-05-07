@@ -1,3 +1,51 @@
+function $(selector, callback) {
+
+    if (callback) {
+
+        [...document.querySelectorAll(selector)].forEach(callback);
+
+    } else {
+
+        return document.querySelector(selector) || document.createElement('div');
+
+    }
+
+}
+
+$('.select-state', el => {
+
+    el.onchange = e => localStorage.setItem('state', e.target.value);
+
+});
+
+$('#gigs-btn').onclick = e => {
+
+    window.location = `/drone-pilot-jobs/${e.target.previousElementSibling.value}`;
+
+};
+
+$('#classes-btn').onclick = e => {
+
+    window.location = `/drone-license-classes/${e.target.previousElementSibling.value}`;
+
+};
+
+function fail() {
+
+    localStorage.setItem('state', 'n/a');
+
+}
+
+function selectState(s) {
+
+    document.querySelectorAll('.select-state').forEach(select => {
+
+        select.value = s;
+
+    });
+
+}
+
 function parseState(json) {
 
     for (let i = 0; i < json.results.length; i++) {
@@ -15,34 +63,6 @@ function parseState(json) {
         }
 
     }
-
-}
-
-function selectState(s) {
-
-    document.querySelectorAll('.select-state').forEach(select => {
-
-        select.value = s;
-
-    });
-
-}
-
-function saveStateSelection(e) {
-
-    localStorage.setItem('state', e.target.value);
-
-}
-
-function goToGigs(e) {
-
-    window.location = `/drone-pilot-jobs/${e.target.previousElementSibling.value}`;
-
-}
-
-function fail() {
-
-    localStorage.setItem('state', 'n/a');
 
 }
  

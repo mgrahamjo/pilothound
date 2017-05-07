@@ -9,7 +9,10 @@
         <img class="usa" src="/images/usa.png"/>
         <h2>Drone gigs near you</h2>
         <p>Select your state:</p>
-        <:include inc/select-state:>
+        <div class="input">
+            <:include inc/select-state:>
+            <div class="btn left" id="gigs-btn">Go</div>
+        </div>
     </div>
 </div>
 <div class="wrapper light clear">
@@ -26,7 +29,10 @@
     <div class="content clear">
         <h2>Become a Certified UAV Operator</h2>
         <p>Select your state:</p>
-        <:include inc/select-state:>
+        <div class="input">
+            <:include inc/select-state:>
+            <div class="btn left" id="classes-btn">Go</div>
+        </div>
     </div>
 </div>
 <script type="notjs" id="something"><::key::></script>
