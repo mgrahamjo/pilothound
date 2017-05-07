@@ -10,7 +10,7 @@
         </p>
 
         <: items.forEach(gig => { :>
-            <a class="result" href="<:gig.url:>" target="_blank">
+            <a class="result gig" href="<:gig.url:>" target="_blank">
                 <div class="result-title"><:gig.title:></div>
                 <div class="result-source"><:gig.source:></div>
                 <p><::gig.snippet::></p>

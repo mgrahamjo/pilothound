@@ -2,7 +2,7 @@ const escape = require('../util/escape');
 
 let sql;
 
-const COURSE_FIELDS = 'course.url, course.name, course.headline, school.name AS school, school.id AS schoolId';
+const COURSE_FIELDS = 'course.url, course.name, course.headline, course.features, school.name AS school, school.logo, school.color';
 
 const GIG_FIELDS = 'gig.url, gig.title, gig.snippet, gig.source';
 

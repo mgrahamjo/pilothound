@@ -10,11 +10,24 @@
         </p>
 
         <: items.forEach(course => { :>
-            <div class="result">
-                <a target="_blank" href="<:course.url:>" class="result-title" ><:course.name:></a>
-                <a class="result-source" href="/uav-schools/<:course.schoolId:>"><:course.school:></a>
-                <p><:course.headline:></p>
-            </div>
+            <a class="result clear course" target="_blank" href="<:course.url:>">
+                <div class="left">
+                    <div class="logo" style="background-image:url(/images/schools/<:course.logo:>);background-color:<:course.color:>"></div>
+                    <div class="btn">Learn more</div>
+                </div>
+                <div class="info">
+                    <div class="result-title" ><:course.name:></div>
+                    <div class="result-source"><:course.school:></div>
+                    <div class="desc">
+                        <div><:course.headline:></div>
+                        <ul>
+                        <: course.features.split(',').slice(0, 3).forEach(feature => { :>
+                            <li><:feature:></li>
+                        <: }) :>
+                        </ul>
+                    </div>
+                </div>
+            </a>
         <: }) :>
 
         <:include inc/pagination:>
