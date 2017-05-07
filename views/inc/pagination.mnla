@@ -1,0 +1,15 @@
+<div class="pagination">
+
+    <: if (page > 1) { :>
+        <a class="page prev" href="<:path:>?p=<:i-1:>">prev</a>
+    <: } :>
+
+    <: for (let i = page; i * 20 - 20 < count && i < page + 4; i++) { :>
+        <a class="page<:i === page ? ' current' : '':>" href="<:path:>?p=<:i:>"><:i:></a>
+    <: } :>
+
+    <: if (page * 20 < count) { :>
+        <a class="page next" href="<:path:>?p=<:i+1:>">next</a>
+    <: } :>
+
+</div>

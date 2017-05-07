@@ -4,14 +4,20 @@
 
         <h1>UAV Job Openings <:location:></h1>
 
-        <p class="result-count"><:count:> results</p>
+        <p class="result-count clear">
+            <:start:> - <:start + 19:>
+            <span class="right"><:count:> results</span>
+        </p>
 
         <: gigs.forEach(gig => { :>
-            <div class="result">
-                <a href="<:gig.url:>" class="result-title" ><:gig.title:></a>
+            <a class="result" href="<:gig.url:>" target="_blank">
+                <div class="result-title"><:gig.title:></div>
+                <div class="result-source"><:gig.source:></div>
                 <p><::gig.snippet::></p>
-            </div>
+            </a>
         <: }) :>
+
+        <:include inc/pagination:>
         
     </div>
 </div>

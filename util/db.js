@@ -4,7 +4,7 @@ let sql;
 
 const COURSE_FIELDS = 'course.url, course.name, course.headline, school.name AS school, school.id AS schoolId';
 
-const GIG_FIELDS = 'gig.url, gig.title, gig.snippet';
+const GIG_FIELDS = 'gig.url, gig.title, gig.snippet, gig.source';
 
 const mod = (...args) => resolve => {
 

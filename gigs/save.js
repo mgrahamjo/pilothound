@@ -1,5 +1,5 @@
 const db = require('sqlite'),
-    escape = require('./util/escape.js');
+    escape = require('../util/escape.js');
 
 let i = 0,
     gigs;

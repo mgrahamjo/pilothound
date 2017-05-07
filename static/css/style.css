@@ -159,16 +159,56 @@ select:focus, input:focus {
 .result {
     background-color: white;
     color: black;
-    padding: 20px 30px 10px;
     max-width: 600px;
     margin: 30px auto 0;
     display: block;
+    box-shadow: 2px 2px #f3f3f3;
+    transition: box-shadow 0.2s;
+}
+
+.result:hover {
+    box-shadow: 2px 2px #ececec;
+}
+
+.result:hover .result-title {
+    background-color: #3ed8a7;
+}
+
+.result:hover .result-source {
+    background-color: #62dcb5;
+}
+
+.result p {
+    margin: 0;
+    padding: 20px;
+    color: #717171;
+    line-height: 1.5;
+}
+
+.result b, .result strong {
+    font-weight: 100;
 }
 
 .result-title {
-    color: #2eca99;
+    background-color: #2eca99;
     font-weight: bold;
     display: block;
+    padding: 10px 14px;
+    transition: background-color 0.2s;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px #3fbb94;
+}
+
+.result-source {
+    padding: 5px 14px 6px;
+    background-color: #5ad4ad;
+    font-size: 10pt;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s;
+    text-shadow: 1px 1px #3fbb94;
 }
 
 .result-strong {
@@ -179,8 +219,30 @@ select:focus, input:focus {
 }
 
 .result-count {
-    background-color: #f3f3f3;
-    padding: 3px 6px;
+    background-color: #f1f3f6;
+    padding: 3px 12px 4px;
     font-size: 9pt;
     font-weight: bold;
+    color: #717171;
+    border-radius: 20px;
+}
+
+.pagination {
+    margin-top: 22px;
+}
+
+.page {
+    color: #717171;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    margin: 3px;
+    display: inline-block;
+    box-shadow: 1px 1px #f3f3f3;
+}
+
+.page.current {
+    background-color: #f5f5f5;
+    pointer-events: none;
 }
