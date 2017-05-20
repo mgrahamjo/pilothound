@@ -38,7 +38,7 @@ mod.gigsInState = state => sql(`
     SELECT ${GIG_FIELDS} FROM gig
     LEFT JOIN state_gig 
     ON gig.id=state_gig.gig_id
-    WHERE state="${escape(state)}"
+    WHERE state IS "${escape(state)}"
 `);
 
 mod.coursesInState = state => sql(`
@@ -47,21 +47,21 @@ mod.coursesInState = state => sql(`
         ON course.id = state_course.course_id
     JOIN school
         ON course.school = school.id
-    WHERE state_course.state = "${escape(state)}"
+    WHERE state_course.state IS "${escape(state)}"
 `);
 
 mod.coursesOnline = () => sql(`
     SELECT ${COURSE_FIELDS} FROM course
     JOIN school
         ON course.school = school.id
-    WHERE course.online = 1
+    WHERE course.online IS 1
 `);
 
 mod.coursesOffline = () => sql(`
     SELECT ${COURSE_FIELDS} FROM course
     JOIN school
         ON course.school = school.id
-    WHERE course.online != 1
+    WHERE course.online IS NOT 1
 `);
 
 module.exports = mod;
