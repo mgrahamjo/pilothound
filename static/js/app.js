@@ -108,3 +108,24 @@ if (state !== 'n/a') {
     }
 
 }
+
+const hero = $('.hero');
+
+if (hero && window.innerWidth > 400 && window.pageYOffset !== undefined) {
+
+    function p() {
+
+        window.requestAnimationFrame(() => {
+
+            const o = Math.floor(window.pageYOffset / 5) + 65;
+
+            hero.setAttribute('style', 'background-position: 0 -' + o + 'px;');
+
+        });
+
+    }
+
+    window.addEventListener('scroll', p);
+
+    p();
+}

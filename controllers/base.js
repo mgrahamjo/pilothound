@@ -2,14 +2,24 @@ const paginate = require('../util/paginate');
 
 module.exports = opts => {
 
-    opts.data().then(items => {
+    opts.article().then(article => 
 
-        const data = paginate(opts.req, items);
+        opts.data().then(items => {
 
-        data.slug = opts.slug;
+            const data = paginate(opts.req, items);
 
-        opts.res.render(opts.view, data);
+            data.slug = opts.slug;
 
-    });
+            data.bodyClass = opts.view;
+
+            data.article = article[0].body;
+
+            data.isGigsPage = opts.req.path === '/drone-pilot-jobs';
+
+            opts.res.render(opts.view, data);
+
+        })
+
+    );
 
 };

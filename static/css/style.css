@@ -1,8 +1,8 @@
 body {
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    font-weight: 100;
-    background: #1f2123;
+    font-size: 12px;
+    background: #f5f5f5;
 }
 
 a {
@@ -11,7 +11,28 @@ a {
 }
 
 h1, h2, h3 {
-    font-weight: 100;
+    line-height: 1.1em;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+label {
+    display: block;
+    color: #959798;
+    margin-bottom: 7px;
+    font-size: 10pt;
+}
+
+.half {
+    width: 47%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px 0;
+    border-top: 3px solid #a19ec7;
+    height: 228px;
 }
 
 .left {
@@ -28,32 +49,39 @@ h1, h2, h3 {
   clear: both;
 }
 
-.light {
-    background-color: #fafbfd;
-    box-shadow: inset 0 0 150px #abb9bd;
+.center {
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.gray {
+    background-color: #efefef;
 }
 
 .hero {
     text-align: center;
-    width: 100%;
-    height: 350px;
-    top: 0;
-    padding-top: 10%;
-    background-image: url(/images/drone.jpg);
-    background-repeat: no-repeat;
-    background-position: 10% 25%;
-    background-size: 18%;
+    height: 380px;
+    overflow: hidden;
+    background-image: url(/images/sf.jpg);
+    background-size: cover;
+    background-position: 0 -65px;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 {
-    margin-bottom: 3%;
+    margin: 137px 0 0;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .header {
-    position: relative;
+    position: absolute;
+    color: white;
+    width: 100%;
     z-index: 1;
-    background-color: #1f2123;
-    color: #fafbfd;
 }
 
 .header a {
@@ -64,12 +92,13 @@ h1, h2, h3 {
 }
 
 .header > a {
-    font-weight: bold;
+    font-size: 16px;
+    line-height: 1;
 }
 
 .header a:hover {
-    background-color: #2eca99;
-    text-shadow: 1px 1px 0px #238e6c;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .btn {
@@ -83,20 +112,19 @@ h1, h2, h3 {
 }
 
 .btn:hover {
-    background-color: #3be8b2;
+    background-color: #30daa5;;
     text-shadow: 1px 1px 0px #2eca99;
 }
 
 .content {
-    color: #fafbfd;
+    color: #636363;
     max-width: 550px;
     padding: 60px 20px;
     margin: 0 auto;
 }
 
-.usa {
-    float: left;
-    margin-right: 34px;
+.half.right h3 {
+    margin: 23px 0;
 }
 
 select, input {
@@ -106,8 +134,9 @@ select, input {
     background: none;
     border: 0;
     border-radius: 0;
-    font-family: 'Exo 2';
-    font-size: 12pt;
+    font-family: 'Montserrat';
+    color: #636363;
+    font-size: 10pt;
     font-weight: 100;
     padding: 4px;
     float: left;
@@ -115,9 +144,11 @@ select, input {
 }
 
 .input {
-    box-shadow: 1px 1px 3px rgba(0,0,0,.15);
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,.15);
     display: inline-block;
     background: white;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 input {
@@ -137,10 +168,6 @@ select {
 
 select:focus, input:focus {
     outline: none;
-}
-
-.light .content {
-    color: #1f2123;
 }
 
 .go {
@@ -306,4 +333,50 @@ select:focus, input:focus {
     background-color: white;
     float: left;
     width: calc(100% - 135px);
+}
+
+.article .header {
+    background-color: #22315a;
+    border-bottom: 15px solid #a29fc8;
+}
+
+.article-body {
+    line-height: 1.5em;
+}
+
+.article-body a {
+    color: #3b9eda;
+}
+
+.article-body .right {
+    margin: 0 0 15px 15px;
+}
+
+.article-body .left {
+    margin: 0 15px 15px 0;
+}
+
+footer {
+    background-color: #2e3137;
+    color: #f5f5f5;
+    margin-top: 25px;
+}
+
+footer .content {
+    max-width: 900px;
+    padding: 10px 20px;
+}
+
+.footer {
+    border-bottom: 1px solid #272727;
+    box-shadow: 0px 1px #3e3e3e;
+}
+
+.footer .nav {
+    color: gray;
+}
+
+.footer-logo {
+    font-size: 13pt;
+    line-height: 1.1;
 }

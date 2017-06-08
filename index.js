@@ -2,10 +2,7 @@ const express = require('express'),
     app = express(),
     manila = require('manila')(),
     sqlite = require('sqlite'),
-    gigs = require('./controllers/gigs'),
-    localClasses = require('./controllers/local-classes'),
-    onlineClasses = require('./controllers/online-classes'),
-    index = require('./controllers/index'),
+    article = require('./controllers/article'),
     bodyParser = require('body-parser'),
     expressAdmin = require('express-admin'),
     db = require('./util/db');
@@ -16,13 +13,19 @@ const initApp = admin => {
 
     app.use('/admin', admin);
 
-    app.get('/', (req, res) => index(res));
+    app.get('/', (req, res) => require('./controllers/index')(res));
 
-    app.get('/drone-pilot-jobs/:state?', gigs);
+    app.get('/jobs/:state?', require('./controllers/gigs'));
 
-    app.get('/drone-license-classes/:state?', localClasses);
+    app.get('/classes/:state?', require('./controllers/classes'));
 
-    app.get('/online-drone-classes', onlineClasses);
+    app.get('/drone-pilot-jobs', article);
+
+    app.get('/drone-license-classes', article);
+
+    app.get('/online-drone-classes', article);
+
+    app.get('/part-107-training', article);
 
     app.use(express.static('static'));
 

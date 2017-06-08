@@ -1,17 +1,20 @@
 <!doctype html>
+<html lang="en-US">
 <head>
-<title>PILOT HOUND | <:slug:></title>
-<link type="text/css" rel="stylesheet" href="/css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+    <title>PilotHound | <:slug:></title>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
 </head>
-<body>
+<body class="<:bodyClass:>">
 <header class="header">
-    <a href="/">PILOT HOUND</a>
+    <a href="/">PilotHound</a>
     <div class="right">
-        <a class="nav" href="/drone-pilot-jobs">Jobs</a>
-        <a class="nav" href="/drone-license-classes">Local Training</a>
-        <a class="nav" href="/online-drone-classes">Online Courses</a>
-        <a class="nav" href="/drones">Drones &amp; Parts</a>
-        <a class="nav" href="/blog">Blog</a>
+        <a class="nav" href="/drone-pilot-jobs">DRONE PILOT JOBS</a>
+        <a class="nav" href="/drone-license-classes">LOCAL TRAINING</a>
+        <a class="nav" href="/online-drone-classes">ONLINE COURSES</a>
+        <a class="nav" href="/part-107-training">PART 107 PREP</a>
     </div>
 </header>

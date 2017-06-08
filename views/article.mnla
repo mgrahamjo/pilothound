@@ -1,0 +1,53 @@
+<:include inc/header:>
+<div class="wrapper light">
+    <div class="content">
+
+        <div class="article-body"><::article::></div>
+
+        <h1><:slug:></h1>
+
+        <p class="result-count clear">
+            <:start:> - <:Math.min(start + 19, count):>
+            <span class="right"><:count:> results</span>
+        </p>
+
+        <: if (isGigsPage) { :>
+
+            <: items.forEach(gig => { :>
+                <a class="result gig" href="<:gig.url:>" target="_blank">
+                    <div class="result-title"><:gig.title:></div>
+                    <div class="result-source"><:gig.source:></div>
+                    <p><::gig.snippet::></p>
+                </a>
+            <: }) :>
+
+        <: } else { :>
+
+            <: items.forEach(course => { :>
+                <a class="result clear course" target="_blank" href="<:course.url:>">
+                    <div class="left">
+                        <div class="logo" style="background-image:url(/images/schools/<:course.logo:>);background-color:<:course.color:>"></div>
+                        <div class="btn">Learn more</div>
+                    </div>
+                    <div class="info">
+                        <div class="result-title" ><:course.name:></div>
+                        <div class="result-source"><:course.school:></div>
+                        <div class="desc">
+                            <div><:course.headline:></div>
+                            <ul>
+                            <: course.features.split(',').slice(0, 3).forEach(feature => { :>
+                                <li><:feature:></li>
+                            <: }) :>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            <: }) :>
+
+        <: } :>
+
+        <:include inc/pagination:>
+        
+    </div>
+</div>
+<:include inc/footer:>

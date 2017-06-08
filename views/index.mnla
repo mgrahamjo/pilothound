@@ -1,37 +1,50 @@
 <:include inc/header:>
-<div class="hero light">
-    <h1>Launch your career as a Drone Pilot</h1>
-    <a class="btn" href="/drone-pilot-jobs">Find Work</a>
-    <a class="btn" href="/drone-license-classes">Get Certified</a>
+<div class="hero">
+    <h1>Launch Your Drone Pilot Career</h1>
 </div>
 <div class="wrapper">
-    <div class="content clear">
-        <img class="usa" src="/images/usa.png"/>
-        <h2>Drone gigs near you</h2>
-        <p>Select your state:</p>
+    <div class="content center">
+        <h2>Find a Drone Pilot Job Near You</h2>
+        <p class="full-width">
+            <img src="/images/drone-icon.png" style="filter: brightness(0.73) contrast(2); width: 106px;"/>
+        </p>
+        <label>Select your state:</label>
         <div class="input">
             <:include inc/select-state:>
-            <div class="btn left" id="gigs-btn">Go</div>
+            <div class="btn left" id="gigs-btn">GO</div>
         </div>
     </div>
 </div>
-<div class="wrapper light clear">
-    <div class="content clear">
-        <img class="right" src="/images/email.png" width="200"/>
+<div class="wrapper gray">
+    <div class="content center clear">
+        <h2>UAV Pilot Training Programs</h2>
+        <div class="half left">
+            <p class="full-width">
+                <img src="/images/school-icon.png" style="width: 66px;"/>
+            </p>
+            <h3>Local Programs</h3>
+            <label>Select your state:</label>
+            <div class="input">
+                <:include inc/select-state:>
+                <div class="btn left" id="local-programs-btn">GO</div>
+            </div>
+        </div>
+        <div class="half right">
+            <p class="full-width">
+                <img src="/images/computer-icon.png" style="width: 70px;"/>
+            </p>
+            <h3>Online Programs</h3>
+            <a class="btn" href="/online-drone-classes">FIND ONLINE PROGRAMS</a>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="content center">
+        <img class="right" src="/images/email.png" style="margin: 14px 53px 0 -37px"/>
         <h2 class="leads-h2">Get job leads in your inbox</h2>
         <div class="input">
             <input type="email" class="left" placeholder="your@email.address" required/>
-            <div class="btn left">Submit</div>
-        </div>
-    </div>
-</div>
-<div class="wrapper">
-    <div class="content clear">
-        <h2>Become a Certified UAV Operator</h2>
-        <p>Select your state:</p>
-        <div class="input">
-            <:include inc/select-state:>
-            <div class="btn left" id="classes-btn">Go</div>
+            <div class="btn left">SUBMIT</div>
         </div>
     </div>
 </div>

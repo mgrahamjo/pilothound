@@ -2,6 +2,8 @@
 <div class="wrapper light">
     <div class="content">
 
+        <div class="article"><::article::></div>
+
         <h1><:slug:></h1>
 
         <p class="result-count clear">

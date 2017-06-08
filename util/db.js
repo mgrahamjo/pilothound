@@ -64,4 +64,16 @@ mod.coursesOffline = () => sql(`
     WHERE course.online IS NOT 1
 `);
 
+mod.prepCourses = () => sql(`
+    SELECT ${COURSE_FIELDS} FROM course
+    JOIN school
+        ON course.school = school.id
+    WHERE course.level IS "P"
+`);
+
+mod.article = id => sql(`
+    SELECT body FROM article
+    WHERE article.id IS ${id}
+`);
+
 module.exports = mod;
