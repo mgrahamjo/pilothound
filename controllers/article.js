@@ -1,27 +1,28 @@
 const db = require('../util/db'),
     controller = require('./base'),
-    swap = require('../util/swap');
+    swap = require('../util/swap'),
+    constants = require('../util/constants');
 
 module.exports = (req, res) => controller({
     req,
     res,
     article: () => db.article(swap(req.path, {
-        '/drone-pilot-jobs': () => 1,
-        '/drone-license-classes': () => 2,
-        '/online-drone-classes': () => 4,
-        '/part-107-training': () => 3
+        [constants.gigsUrl]: () => 1,
+        [constants.classesUrl]: () => 2,
+        [constants.onlineClassesUrl]: () => 4,
+        [constants.part107Url]: () => 3
     })),
     data: swap(req.path, {
-        '/drone-pilot-jobs': () => db.gigs,
-        '/drone-license-classes': () => db.coursesOffline,
-        '/online-drone-classes': () => db.coursesOnline,
-        '/part-107-training': () => db.coursesOnline
+        [constants.gigsUrl]: () => db.gigs,
+        [constants.classesUrl]: () => db.coursesOffline,
+        [constants.onlineClassesUrl]: () => db.coursesOnline,
+        [constants.part107Url]: () => db.coursesOnline
     }),
     slug: swap(req.path, {
-        '/drone-pilot-jobs': () => 'All Drone Pilot Jobs',
-        '/drone-license-classes': () => 'In-person UAV Training Programs',
-        '/online-drone-classes': () => 'All Online Drone Pilot Classes',
-        '/part-107-training': () => 'Online UAV Pilot Training'
+        [constants.gigsUrl]: () => 'All Drone Pilot Jobs',
+        [constants.classesUrl]: () => 'In-person UAV Training Programs',
+        [constants.onlineClassesUrl]: () => 'All Online Drone Pilot Classes',
+        [constants.part107Url]: () => 'Online UAV Pilot Training'
     }),
     view: 'article'
 });

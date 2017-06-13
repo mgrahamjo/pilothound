@@ -14,7 +14,7 @@ module.exports = opts => {
 
             data.article = article[0].body;
 
-            data.isGigsPage = opts.req.path === '/drone-pilot-jobs';
+            data.path = opts.req.path.substring(1);
 
             opts.res.render(opts.view, data);
 

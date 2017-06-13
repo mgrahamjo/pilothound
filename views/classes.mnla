@@ -2,14 +2,19 @@
 <div class="wrapper light">
     <div class="content">
 
-        <div class="article"><::article::></div>
-
         <h1><:slug:></h1>
 
-        <p class="result-count clear">
+        <div class="search-wrap">
+            <div class="input">
+                <:include inc/select-state:>
+                <div class="btn left" id="classes-btn">GO</div>
+            </div>
+        </div>
+
+        <div class="result-count clear">
             <:start:> - <:Math.min(start + 19, count):>
             <span class="right"><:count:> results</span>
-        </p>
+        </div>
 
         <: items.forEach(course => { :>
             <a class="result clear course" target="_blank" href="<:course.url:>">

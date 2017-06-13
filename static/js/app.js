@@ -20,112 +20,119 @@ $('.select-state', el => {
 
 $('#gigs-btn').onclick = e => {
 
-    window.location = `/drone-pilot-jobs/${e.target.previousElementSibling.value}`;
+    window.location = `/jobs/${e.target.previousElementSibling.value}`;
 
 };
 
 $('#classes-btn').onclick = e => {
 
-    window.location = `/drone-license-classes/${e.target.previousElementSibling.value}`;
+    window.location = `/classes/${e.target.previousElementSibling.value}`;
 
 };
 
-function fail() {
+if (window.location.pathname === '/'
+    || window.location.pathname.indexOf('/jobs') === 0
+    || window.location.pathname.indexOf('/classes') === 0) {
 
-    localStorage.setItem('state', 'n/a');
+    function fail() {
 
-}
+        localStorage.setItem('state', 'n/a');
 
-function selectState(s) {
+    }
 
-    document.querySelectorAll('.select-state').forEach(select => {
+    function selectState(s) {
 
-        select.value = s;
+        $('.select-state', el => {
 
-    });
+            el.value = s;
 
-}
+        });
 
-function parseState(json) {
+    }
 
-    for (let i = 0; i < json.results.length; i++) {
+    function parseState(json) {
 
-        const parts = json.results[i].address_components;
+        for (let i = 0; i < json.results.length; i++) {
 
-        for (let j = 0; j < parts.length; j++) {
+            const parts = json.results[i].address_components;
 
-            if (parts[j].types.indexOf('administrative_area_level_1') !== -1) {
+            for (let j = 0; j < parts.length; j++) {
 
-                return parts[j].short_name;
+                if (parts[j].types.indexOf('administrative_area_level_1') !== -1) {
+
+                    return parts[j].short_name;
+
+                }
 
             }
 
         }
 
     }
+     
+    const state = localStorage.getItem('state');
 
-}
- 
-const state = localStorage.getItem('state');
+    if (state !== 'n/a') {
 
-if (state !== 'n/a') {
+        const states = [...document.querySelectorAll('.select-state option')].map(opt => opt.value);
 
-    const states = [...document.querySelectorAll('.select-state option')].map(opt => opt.value);
+        if (state && states.indexOf(state) !== -1) {
 
-    if (state && states.indexOf(state) !== -1) {
+            selectState(state);
 
-        selectState(state);
+        } else if ('geolocation' in navigator) {
 
-    } else if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(pos => {
 
-        navigator.geolocation.getCurrentPosition(pos => {
+                fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${pos.coords.latitude},${pos.coords.longitude}&components=administrative_area&key=${atob(document.getElementById('something').innerHTML)}`)
+                    .then(data => data.json())
+                    .then(json => parseState(json))
+                    .then(s => {
 
-            fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${pos.coords.latitude},${pos.coords.longitude}&components=administrative_area&key=${atob(document.getElementById('something').innerHTML)}`)
-                .then(data => data.json())
-                .then(json => parseState(json))
-                .then(s => {
+                        if (s && states.indexOf(s) !== -1) {
 
-                    if (s && states.indexOf(s) !== -1) {
+                            selectState(s);
 
-                        selectState(s);
+                            localStorage.setItem('state', s);
 
-                        localStorage.setItem('state', s);
+                        } else {
 
-                    } else {
+                            fail();
 
-                        fail();
+                        }
 
-                    }
+                    })
+                    .catch(fail);
+            });
 
-                })
-                .catch(fail);
-        });
+        } else {
 
-    } else {
+            fail();
 
-        fail();
+        }
 
+    }
+
+    const hero = $('.hero');
+
+    if (hero && window.innerWidth > 400 && window.pageYOffset !== undefined) {
+
+        function p() {
+
+            window.requestAnimationFrame(() => {
+
+                const o = Math.floor(window.pageYOffset / 5) + parseInt(window.innerWidth / 10);
+
+                hero.setAttribute('style', 'background-position: 0 -' + o + 'px;');
+
+            });
+
+        }
+
+        window.addEventListener('scroll', p);
+
+        p();
     }
 
 }
 
-const hero = $('.hero');
-
-if (hero && window.innerWidth > 400 && window.pageYOffset !== undefined) {
-
-    function p() {
-
-        window.requestAnimationFrame(() => {
-
-            const o = Math.floor(window.pageYOffset / 5) + 65;
-
-            hero.setAttribute('style', 'background-position: 0 -' + o + 'px;');
-
-        });
-
-    }
-
-    window.addEventListener('scroll', p);
-
-    p();
-}

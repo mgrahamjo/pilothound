@@ -49,5 +49,4 @@
     </div>
 </div>
 <script type="notjs" id="something"><::key::></script>
-<script src="/js/app.js"></script>
 <:include inc/footer:>

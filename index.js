@@ -5,6 +5,7 @@ const express = require('express'),
     article = require('./controllers/article'),
     bodyParser = require('body-parser'),
     expressAdmin = require('express-admin'),
+    constants = require('./util/constants'),
     db = require('./util/db');
 
 const initApp = admin => {
@@ -19,13 +20,13 @@ const initApp = admin => {
 
     app.get('/classes/:state?', require('./controllers/classes'));
 
-    app.get('/drone-pilot-jobs', article);
+    app.get(constants.gigsUrl, article);
 
-    app.get('/drone-license-classes', article);
+    app.get(constants.classesUrl, article);
 
-    app.get('/online-drone-classes', article);
+    app.get(constants.onlineClassesUrl, article);
 
-    app.get('/part-107-training', article);
+    app.get(constants.part107Url, article);
 
     app.use(express.static('static'));
 

@@ -7,10 +7,11 @@
     <meta http-equiv="Content-Language" content="en">
     <link type="text/css" rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 </head>
 <body class="<:bodyClass:>">
 <header class="header">
-    <a href="/">PilotHound</a>
+    <a href="/" class="logo">PilotHound</a>
     <div class="right">
         <a class="nav" href="/drone-pilot-jobs">DRONE PILOT JOBS</a>
         <a class="nav" href="/drone-license-classes">LOCAL TRAINING</a>

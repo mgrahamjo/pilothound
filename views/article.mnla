@@ -6,12 +6,23 @@
 
         <h1><:slug:></h1>
 
-        <p class="result-count clear">
+        <: if (path !== 'online-drone-classes') { :>
+
+            <div class="search-wrap">
+                <div class="input">
+                    <:include inc/select-state:>
+                    <div class="btn left" id="<: path === 'drone-pilot-jobs' ? 'gigs-btn' : 'classes-btn' :>">GO</div>
+                </div>
+            </div>
+
+        <: } :>
+
+        <div class="result-count clear">
             <:start:> - <:Math.min(start + 19, count):>
             <span class="right"><:count:> results</span>
-        </p>
+        </div>
 
-        <: if (isGigsPage) { :>
+        <: if (path === 'drone-pilot-jobs') { :>
 
             <: items.forEach(gig => { :>
                 <a class="result gig" href="<:gig.url:>" target="_blank">
