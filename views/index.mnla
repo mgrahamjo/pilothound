@@ -9,9 +9,9 @@
             <img src="/images/drone-icon.png" style="filter: brightness(0.73) contrast(2); width: 106px;"/>
         </p>
         <label>Select your state:</label>
-        <div class="input">
+        <div class="select">
             <:include inc/select-state:>
-            <div class="btn left" id="gigs-btn">GO</div>
+            <div class="btn left search-btn" data-path="/jobs">GO</div>
         </div>
     </div>
 </div>
@@ -24,9 +24,9 @@
             </p>
             <h3>Local Programs</h3>
             <label>Select your state:</label>
-            <div class="input">
+            <div class="select">
                 <:include inc/select-state:>
-                <div class="btn left" id="local-programs-btn">GO</div>
+                <div class="btn left search-btn" data-path="/classes">GO</div>
             </div>
         </div>
         <div class="half right">

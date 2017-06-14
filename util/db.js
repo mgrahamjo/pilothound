@@ -64,6 +64,17 @@ mod.coursesOffline = () => sql(`
     WHERE course.online IS NOT 1
 `);
 
+mod.prepCoursesInState = state => sql(`
+    SELECT ${COURSE_FIELDS} FROM course
+    JOIN state_course 
+        ON course.id = state_course.course_id
+    JOIN school
+        ON course.school = school.id
+    WHERE course.level IS "P"
+        AND (state_course.state IS "${escape(state)}"
+        OR course.online IS 1)
+`);
+
 mod.prepCourses = () => sql(`
     SELECT ${COURSE_FIELDS} FROM course
     JOIN school

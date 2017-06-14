@@ -6,15 +6,21 @@ module.exports = opts => {
 
         opts.data().then(items => {
 
-            const data = paginate(opts.req, items);
+            const data = paginate(opts.req, items, opts.searchPath);
 
             data.slug = opts.slug;
 
-            data.bodyClass = opts.view;
+            data.canonical = opts.canonical;
 
-            data.article = article[0].body;
+            data.isGigsPage = opts.isGigsPage || false;
 
-            data.path = opts.req.path.substring(1);
+            data.isOnlineClassesPage = opts.isOnlineClassesPage || false;
+
+            data.searchPath = opts.searchPath;
+
+            data.bodyClass = 'article';
+
+            data.article = article ? article[0].body : '';
 
             opts.res.render(opts.view, data);
 

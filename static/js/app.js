@@ -18,21 +18,13 @@ $('.select-state', el => {
 
 });
 
-$('#gigs-btn').onclick = e => {
+$('.search-btn').onclick = e => {
 
-    window.location = `/jobs/${e.target.previousElementSibling.value}`;
-
-};
-
-$('#classes-btn').onclick = e => {
-
-    window.location = `/classes/${e.target.previousElementSibling.value}`;
+    window.location = `${e.target.getAttribute('data-path')}/${e.target.previousElementSibling.value}`;
 
 };
 
-if (window.location.pathname === '/'
-    || window.location.pathname.indexOf('/jobs') === 0
-    || window.location.pathname.indexOf('/classes') === 0) {
+if (window.location.pathname === '/') {
 
     function fail() {
 

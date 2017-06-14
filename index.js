@@ -16,17 +16,21 @@ const initApp = admin => {
 
     app.get('/', (req, res) => require('./controllers/index')(res));
 
-    app.get('/jobs/:state?', require('./controllers/gigs'));
+    app.get(`${constants.gigsUrl}/:state?`, article);
 
-    app.get('/classes/:state?', require('./controllers/classes'));
+    app.get(`${constants.classesUrl}/:state?`, article);
 
-    app.get(constants.gigsUrl, article);
-
-    app.get(constants.classesUrl, article);
+    app.get(`${constants.part107Url}/:state?`, article);
 
     app.get(constants.onlineClassesUrl, article);
 
-    app.get(constants.part107Url, article);
+    app.get(constants.gigsArticleUrl, article);
+
+    app.get(constants.classesArticleUrl, article);
+
+    app.get(constants.onlineClassesArticleUrl, article);
+
+    app.get(constants.part107ArticleUrl, article);
 
     app.use(express.static('static'));
 

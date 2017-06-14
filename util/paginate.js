@@ -1,22 +1,8 @@
-const constants = require('./constants');
-
-module.exports = (req, items) => {
+module.exports = (req, items, path) => {
 
     const page = parseInt(req.query.page || 1);
 
     const start = page * 20 - 19;
-
-    let path = req.path;
-
-    if (path === constants.gigsUrl) {
-
-        path = '/jobs';
-
-    } else if (path === constants.classesUrl) {
-
-        path = '/classes';
-
-    }
 
     return {
         page,

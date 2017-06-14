@@ -6,7 +6,7 @@
             <a class="page prev" href="<:path:>?page=<:page-1:>">prev</a>
         <: } :>
 
-        <: for (let i = page; (i * 20 - 19 <= count) && (i < page + 4); i++) { :>
+        <: for (let i = 1; (i * 20 - 19 <= count) && (i < page + 4); i++) { :>
             <a class="page<:i === page ? ' current' : '':>" href="<:path:>?page=<:i:>"><:i:></a>
         <: } :>
 
