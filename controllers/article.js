@@ -75,6 +75,7 @@ module.exports = (req, res) => {
     return base(Object.assign({
         req,
         res,
+        state,
         view: 'article'
     }, config(state)[basePath]));
 

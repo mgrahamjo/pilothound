@@ -14,9 +14,23 @@
 <header class="header">
     <a href="/" class="logo">PilotHound</a>
     <div class="right">
-        <a class="nav" href="/drone-pilot-jobs">DRONE PILOT JOBS</a>
-        <a class="nav" href="/drone-license-classes">LOCAL TRAINING</a>
-        <a class="nav" href="/online-drone-classes">ONLINE COURSES</a>
-        <a class="nav" href="/part-107-training">PART 107 PREP</a>
+        <a href="/drone-pilot-jobs">DRONE PILOT JOBS</a>
+        <a href="/drone-license-classes">LOCAL TRAINING</a>
+        <a href="/online-drone-classes">ONLINE COURSES</a>
+        <a href="/part-107-training">PART 107 PREP</a>
     </div>
 </header>
+<div class="mobile">
+    <input type="checkbox" class="menu-toggle">
+    <div class="nav">
+        <a href="/drone-pilot-jobs">DRONE PILOT JOBS</a>
+        <a href="/drone-license-classes">LOCAL TRAINING</a>
+        <a href="/online-drone-classes">ONLINE COURSES</a>
+        <a href="/part-107-training">PART 107 PREP</a>
+    </div>
+    <div class="menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>

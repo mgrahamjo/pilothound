@@ -16,6 +16,8 @@ module.exports = opts => {
 
             data.isOnlineClassesPage = opts.isOnlineClassesPage || false;
 
+            data.state = opts.state || 'all';
+
             data.searchPath = opts.searchPath;
 
             data.bodyClass = 'article';

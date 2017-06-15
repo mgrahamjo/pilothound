@@ -1,20 +1,21 @@
 <footer class="header">
     <div class="content clear">
         <div class="right">
-            <a class="nav" href="/drone-pilot-jobs">DRONE PILOT JOBS</a>
-            <a class="nav" href="/drone-license-classes">LOCAL TRAINING</a>
-            <a class="nav" href="/online-drone-classes">ONLINE COURSES</a>
-            <a class="nav" href="/part-107-training">PART 107 PREP</a>
+            <a href="/drone-pilot-jobs">DRONE PILOT JOBS</a>
+            <a href="/drone-license-classes">LOCAL TRAINING</a>
+            <a href="/online-drone-classes">ONLINE COURSES</a>
+            <a href="/part-107-training">PART 107 PREP</a>
         </div>
         <div class="footer">
             <a href="/" class="logo">PilotHound</a>
             <div class="right">
-                <a class="nav" href="/about">About</a>
-                <a class="nav" href="/terms">Terms of Service</a>
-                <a class="nav" href="/privacy">Privacy Policy</a>
+                <a class="link" href="/about">About</a>
+                <a class="link" href="/terms">Terms of Service</a>
+                <a class="link" href="/privacy">Privacy Policy</a>
             </div>
         </div>
     </div>
+    <div class="attribution">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 </footer>
 <script src="/js/app.js"></script>
 </body>

@@ -22,6 +22,14 @@
             <span class="right"><:count:> results</span>
         </div>
 
+        <: if (!items.length) { :>
+
+            <p class="article-body">Shoot, we don't have any results for this state yet. We're always working to add more.</p>
+
+            <p class="article-body">If you're interested in online training, try our <a href="/online-drone-classes">online course listings</a>.</p>
+
+        <: } :>
+
         <: if (isGigsPage) { :>
 
             <: items.forEach(gig => { :>

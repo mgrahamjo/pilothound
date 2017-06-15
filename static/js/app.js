@@ -20,25 +20,29 @@ $('.select-state', el => {
 
 $('.search-btn').onclick = e => {
 
-    window.location = `${e.target.getAttribute('data-path')}/${e.target.previousElementSibling.value}`;
+    const path = e.target.getAttribute('data-path');
+
+    const state = e.target.previousElementSibling.value;
+
+    window.location = path + (state === 'all' ? '' : '/' + state);
 
 };
+
+function selectState(s) {
+
+    $('.select-state', el => {
+
+        el.value = s;
+
+    });
+
+}
 
 if (window.location.pathname === '/') {
 
     function fail() {
 
         localStorage.setItem('state', 'n/a');
-
-    }
-
-    function selectState(s) {
-
-        $('.select-state', el => {
-
-            el.value = s;
-
-        });
 
     }
 
@@ -113,9 +117,7 @@ if (window.location.pathname === '/') {
 
             window.requestAnimationFrame(() => {
 
-                const o = Math.floor(window.pageYOffset / 5) + parseInt(window.innerWidth / 10);
-
-                hero.setAttribute('style', 'background-position: 0 -' + o + 'px;');
+                hero.style.height = 380 - window.pageYOffset / 4 + 'px';
 
             });
 
@@ -125,6 +127,10 @@ if (window.location.pathname === '/') {
 
         p();
     }
+
+} else {
+
+    selectState($('.select-state').getAttribute('data-init'));
 
 }
 

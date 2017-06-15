@@ -6,7 +6,7 @@
     <div class="content center">
         <h2>Find a Drone Pilot Job Near You</h2>
         <p class="full-width">
-            <img src="/images/drone-icon.png" style="filter: brightness(0.73) contrast(2); width: 106px;"/>
+            <img src="/images/drone-icon.png" width="70" style="margin: 10px"/>
         </p>
         <label>Select your state:</label>
         <div class="select">
@@ -20,7 +20,7 @@
         <h2>UAV Pilot Training Programs</h2>
         <div class="half left">
             <p class="full-width">
-                <img src="/images/school-icon.png" style="width: 66px;"/>
+                <img src="/images/school-icon.png" width="66"/>
             </p>
             <h3>Local Programs</h3>
             <label>Select your state:</label>
@@ -31,7 +31,7 @@
         </div>
         <div class="half right">
             <p class="full-width">
-                <img src="/images/computer-icon.png" style="width: 70px;"/>
+                <img src="/images/computer-icon.png" width="70"/>
             </p>
             <h3>Online Programs</h3>
             <a class="btn" href="/online-drone-classes">FIND ONLINE PROGRAMS</a>
