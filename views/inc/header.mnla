@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="google" content="notranslate">
     <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
@@ -13,24 +14,25 @@
 <body class="<:bodyClass:>">
 <header class="header">
     <a href="/" class="logo">PilotHound</a>
-    <div class="right">
+    <div class="right desktop">
         <a href="/drone-pilot-jobs">DRONE PILOT JOBS</a>
         <a href="/drone-license-classes">LOCAL TRAINING</a>
         <a href="/online-drone-classes">ONLINE COURSES</a>
         <a href="/part-107-training">PART 107 PREP</a>
+    </div>
+    <div class="mobile">
+        <input type="checkbox" class="menu-toggle">
+        <div class="nav">
+            <a href="/">HOME</a>
+            <a href="/drone-pilot-jobs">DRONE PILOT JOBS</a>
+            <a href="/drone-license-classes">LOCAL TRAINING</a>
+            <a href="/online-drone-classes">ONLINE COURSES</a>
+            <a href="/part-107-training">PART 107 PREP</a>
+        </div>
+        <div class="menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </div>
 </header>
-<div class="mobile">
-    <input type="checkbox" class="menu-toggle">
-    <div class="nav">
-        <a href="/drone-pilot-jobs">DRONE PILOT JOBS</a>
-        <a href="/drone-license-classes">LOCAL TRAINING</a>
-        <a href="/online-drone-classes">ONLINE COURSES</a>
-        <a href="/part-107-training">PART 107 PREP</a>
-    </div>
-    <div class="menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-</div>

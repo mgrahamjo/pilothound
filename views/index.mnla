@@ -40,9 +40,13 @@
 </div>
 <div class="wrapper">
     <div class="content center">
-        <img class="right" src="/images/email.png" style="margin: 14px 53px 0 -37px"/>
+        <img class="right desktop" src="/images/email.png" style="margin: 14px 53px 0 -37px"/>
         <h2 class="leads-h2">Get job leads in your inbox</h2>
-        <form action="/newsletter-signup" method="post">
+        <a name="success"></a>
+        <: if (success) { :>
+            <div class="success">Success! You have subscribed to our newsletter.</div>
+        <: } :>
+        <form action="/#success" method="post">
             <div class="input">
                 <input name="email" type="email" class="left" placeholder="your@email.address" required/>
                 <button type="submit" class="btn left">SUBMIT</button>

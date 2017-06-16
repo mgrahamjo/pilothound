@@ -1,9 +1,10 @@
-const fs = require('fs');
+const fs = require('fs'),
+    index = require('./index');
 
 module.exports = (req, res) => 
 
     fs.appendFile('mailing-list.txt', '\n' + req.body.email, () => 
 
-        res.redirect('/')
+        index(req, res)
 
     );

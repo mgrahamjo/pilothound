@@ -24,7 +24,7 @@ sqlite.open('../pilothound-db/pilothound.db').then(() => {
 
     app.set('views', './views');
 
-    app.get('/', (req, res) => require('./controllers/index')(res));
+    app.get('/', require('./controllers/index'));
 
     app.get(`${constants.gigsUrl}/:state?`, article);
 
@@ -42,7 +42,7 @@ sqlite.open('../pilothound-db/pilothound.db').then(() => {
 
     app.get(constants.part107ArticleUrl, article);
 
-    app.post('/newsletter-signup', newsletter);
+    app.post('/', newsletter);
 
     app.listen(8000);
 
