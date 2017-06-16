@@ -42,10 +42,12 @@
     <div class="content center">
         <img class="right" src="/images/email.png" style="margin: 14px 53px 0 -37px"/>
         <h2 class="leads-h2">Get job leads in your inbox</h2>
-        <div class="input">
-            <input type="email" class="left" placeholder="your@email.address" required/>
-            <div class="btn left">SUBMIT</div>
-        </div>
+        <form action="/newsletter-signup" method="post">
+            <div class="input">
+                <input name="email" type="email" class="left" placeholder="your@email.address" required/>
+                <button type="submit" class="btn left">SUBMIT</button>
+            </div>
+        </form>
     </div>
 </div>
 <script type="notjs" id="something"><::key::></script>

@@ -4,15 +4,25 @@ const express = require('express'),
     sqlite = require('sqlite'),
     article = require('./controllers/article'),
     bodyParser = require('body-parser'),
-    expressAdmin = require('express-admin'),
     constants = require('./util/constants'),
-    db = require('./util/db');
+    db = require('./util/db'),
+    newsletter = require('./controllers/newsletter');
 
-const initApp = admin => {
+sqlite.open('../pilothound-db/pilothound.db').then(() => {
 
     db.init(sqlite);
 
-    app.use('/admin', admin);
+    app.use(bodyParser.urlencoded({
+        extended: true
+    }));
+
+    app.use(express.static('static'));
+
+    app.engine('mnla', manila);
+
+    app.set('view engine', 'mnla');
+
+    app.set('views', './views');
 
     app.get('/', (req, res) => require('./controllers/index')(res));
 
@@ -32,42 +42,10 @@ const initApp = admin => {
 
     app.get(constants.part107ArticleUrl, article);
 
-    app.use(express.static('static'));
-
-    app.use(bodyParser.json());
-    
-    app.engine('mnla', manila);
-
-    app.set('view engine', 'mnla');
-
-    app.set('views', './views');
+    app.post('/newsletter-signup', newsletter);
 
     app.listen(8000);
 
     console.log('listening on 8000');
 
-};
-
-const initAdmin = () => {
-
-    expressAdmin.init({
-        dpath: './admin/',
-        config: require('./admin/config.json'),
-        settings: require('./admin/settings.json'),
-        custom: require('./admin/custom.json'),
-        users: require('./admin/users.json')
-    }, (err, admin) => {
-
-        if (err) {
-
-            return console.log(err);
-
-        }
-
-        initApp(admin);
-
-    });
-
-};
-
-sqlite.open('../pilothound-db/pilothound.db').then(initAdmin);
+});

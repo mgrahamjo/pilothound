@@ -82,8 +82,11 @@ label {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.header {
+header {
     position: absolute;
+}
+
+.header {
     color: white;
     width: 100%;
     z-index: 1;
@@ -122,6 +125,9 @@ label {
     transition: background-color 0.2s;
     margin: 0 4px;
     color: #fafbfd;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
 }
 
 .btn:hover {
@@ -359,9 +365,14 @@ select:focus, input:focus {
 }
 
 .article-body {
-    font-family: 'PT Serif', serif;
+    font-family: 'Spectral', serif;
     font-size: 16px;
     line-height: 24px;
+}
+
+.article-body h1,
+.article-body h2 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .article-body a {
@@ -398,6 +409,7 @@ footer {
     background-color: #3a3636;
     color: #f5f5f5;
     border-top: 10px solid #e4836b;
+    margin-top: 25px;
 }
 
 footer .content {
