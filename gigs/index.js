@@ -5,11 +5,19 @@ const indeed = require('./indeed'),
     save = require('./save');
 
 indeed()
-    .then(google)
     .then(glassdoor)
+    .then(google)
     .then(gigs => {
 
-        gigs = interlace([gigs.indeed, gigs.google, gigs.glassdoor]);
+        const originalLength = gigs.indeed.length + gigs.google.length + gigs.glassdoor.length;
+
+        gigs = interlace([gigs.indeed, gigs.google, gigs.glassdoor]).filter(gig => {
+
+            return (gig.title + gig.snippet).match(/(drone|uav|aerial|pilot)/i);
+
+        });
+
+        console.log(`Filtered out ${originalLength - gigs.length} gigs.`);
 
         if (gigs.length > 100) {
 

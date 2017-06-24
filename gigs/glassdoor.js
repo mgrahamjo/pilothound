@@ -48,7 +48,8 @@ function getGigs(callback) {
 
             });
 
-            if ($('.pagingControls .next .disabled').length !== 0) {
+            if ($('.pagingControls .page').length === 0 
+                || page < 11 && $('.pagingControls .next .disabled').length !== 0) {
 
                 callback();
 

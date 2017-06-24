@@ -2,32 +2,28 @@ const paginate = require('../util/paginate');
 
 module.exports = opts => {
 
-    opts.article().then(article => 
+    opts.data().then(items => {
 
-        opts.data().then(items => {
+        const data = paginate(opts.req, items, opts.searchPath);
 
-            const data = paginate(opts.req, items, opts.searchPath);
+        data.slug = opts.slug;
 
-            data.slug = opts.slug;
+        data.canonical = opts.canonical;
 
-            data.canonical = opts.canonical;
+        data.isGigsPage = opts.isGigsPage || false;
 
-            data.isGigsPage = opts.isGigsPage || false;
+        data.isOnlineClassesPage = opts.isOnlineClassesPage || false;
 
-            data.isOnlineClassesPage = opts.isOnlineClassesPage || false;
+        data.state = opts.state || 'all';
 
-            data.state = opts.state || 'all';
+        data.searchPath = opts.searchPath;
 
-            data.searchPath = opts.searchPath;
+        data.bodyClass = 'article';
 
-            data.bodyClass = 'article';
+        data.article = opts.article;
 
-            data.article = article ? article[0].body : '';
+        opts.res.render(opts.view, data);
 
-            opts.res.render(opts.view, data);
-
-        })
-
-    );
+    });
 
 };

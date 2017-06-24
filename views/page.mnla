@@ -1,0 +1,9 @@
+<:include inc/header:>
+<div class="wrapper light">
+    <div class="content">
+
+        <div class="article-body"><::content::></div>
+        
+    </div>
+</div>
+<:include inc/footer:>

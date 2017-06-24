@@ -18,6 +18,10 @@ h1, h2, h3 {
     line-height: 1.1em;
 }
 
+h2 {
+    font-size: 15pt;
+}
+
 h1 {
     font-size: 28px;
 }
@@ -137,8 +141,12 @@ header {
 .content {
     color: #636363;
     max-width: 550px;
-    padding: 60px 44px 20px 20px;
+    padding: 60px 44px 60px 20px;
     margin: 0 auto;
+}
+
+.article .content {
+    padding-bottom: 0;
 }
 
 .half.right h3 {

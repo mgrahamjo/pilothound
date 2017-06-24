@@ -6,7 +6,8 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     constants = require('./util/constants'),
     db = require('./util/db'),
-    newsletter = require('./controllers/newsletter');
+    newsletter = require('./controllers/newsletter'),
+    page = require('./controllers/page');
 
 sqlite.open('../pilothound-db/pilothound.db').then(() => {
 
@@ -25,6 +26,8 @@ sqlite.open('../pilothound-db/pilothound.db').then(() => {
     app.set('views', './views');
 
     app.get('/', require('./controllers/index'));
+
+    app.get('/about', page);
 
     app.get(`${constants.gigsUrl}/:state?`, article);
 
