@@ -1,17 +1,21 @@
 const indeed = require('./indeed'),
     google = require('./google'),
     glassdoor = require('./glassdoor'),
+    dronebase = require('./dronebase'),
+    army = require('./army'),
     interlace = require('interlace-arrays'),
     save = require('./save');
 
 indeed()
     .then(glassdoor)
     .then(google)
+    .then(dronebase)
+    .then(army)
     .then(gigs => {
 
-        const originalLength = gigs.indeed.length + gigs.google.length + gigs.glassdoor.length;
+        const originalLength = gigs.indeed.length + gigs.google.length + gigs.glassdoor.length + gigs.static.length;
 
-        gigs = interlace([gigs.indeed, gigs.google, gigs.glassdoor]).filter(gig => {
+        const dynamicGigs = interlace([gigs.indeed, gigs.google, gigs.glassdoor]).filter(gig => {
 
             return (gig.title + gig.snippet).match(/(drone|uav|aerial|pilot)/i);
 
@@ -19,9 +23,9 @@ indeed()
 
         console.log(`Filtered out ${originalLength - gigs.length} gigs.`);
 
-        if (gigs.length > 100) {
+        if (dynamicGigs.length > 100) {
 
-            save(gigs);
+            save(dynamicGigs.concat(gigs.static));
 
         } else {
 

@@ -1,5 +1,6 @@
 const db = require('sqlite'),
-    escape = require('../util/escape.js');
+    escape = require('../util/escape'),
+    backup = require('./util/backup');
 
 let i = 0,
     gigs;
@@ -43,6 +44,8 @@ function save() {
         });
 
     }
+
+    backup();
 
     console.log(`Saved ${gigs.length} gigs.`);
 
