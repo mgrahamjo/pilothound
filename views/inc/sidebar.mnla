@@ -1,0 +1,41 @@
+<div class="sidebar desktop gray">
+    <div class="sidebar-box">
+        <p class="full-width">
+            <img src="/images/school-icon.png" width="66"/>
+        </p>
+        <h3>Local Programs</h3>
+        <label>Select your state:</label>
+        <div class="select">
+            <:include inc/select-state:>
+            <div class="btn left search-btn" data-path="/classes">GO</div>
+        </div>
+    </div>
+    <div class="sidebar-box">
+        <p class="full-width">
+            <img src="/images/computer-icon.png" width="70"/>
+        </p>
+        <h3>Online Programs</h3>
+        <a class="btn" href="/online-classes">FIND ONLINE PROGRAMS</a>
+    </div>
+    <div class="sidebar-box">
+        <p class="full-width">
+            <img src="/images/drone-icon.png" width="70" style="margin: 10px"/>
+        </p>
+        <h3>Local Drone Jobs</h3>
+        <label>Select your state:</label>
+        <div class="select">
+            <:include inc/select-state:>
+            <div class="btn left search-btn" data-path="/jobs">GO</div>
+        </div>
+    </div>
+    <div class="sidebar-box">
+        <img src="/images/email.png" style="width: 100px;margin: 10px 0 -10px;"/>
+        <h3>Drone Jobs Newsletter</h3>
+        <form action="/#success" method="post">
+            <div class="input">
+                <input name="email" type="email" class="left" placeholder="email" required/>
+                <button type="submit" class="btn left">GO</button>
+            </div>
+        </form>
+    </div>
+</div>

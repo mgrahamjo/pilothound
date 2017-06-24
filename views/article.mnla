@@ -1,5 +1,10 @@
 <:include inc/header:>
-<div class="wrapper light">
+<div class="wrapper clear<: sidebar ? ' with-sidebar' : '' :>">
+
+    <: if (sidebar) { :>
+        <: include inc/sidebar :>
+    <: } :>
+
     <div class="content">
 
         <div class="article-body"><::article::></div>
@@ -66,6 +71,14 @@
         <: } :>
 
         <:include inc/pagination:>
+
+        <: if (isGigsPage) { :>
+
+            <p class="attribution-links">jobs by <a title="Job Search" href="https://www.indeed.com" rel="nofollow"><img alt=Indeed src="https://www.indeed.com/p/jobsearch.gif"/></a> and <a href="https://www.glassdoor.com" rel="nofollow"><img src="https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png" title="Job Search"/></a></p>
+
+            <script type="text/javascript" src="https://gdc.indeed.com/ads/apiresults.js"></script>
+
+        <: } :>
         
     </div>
 </div>

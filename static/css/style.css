@@ -33,14 +33,30 @@ label {
     font-size: 10pt;
 }
 
+.sidebar {
+    float: right;
+    padding: 0 15px;
+}
+
+.sidebar input {
+    width: 120px;
+}
+
+.half,
+.sidebar-box {
+    background-color: white;
+    padding: 0 20px 20px;
+    box-sizing: border-box;
+    margin: 15px 0;
+    border-top: 3px solid #e4836b;
+    text-align: center;
+}
+
 .half {
     width: 47%;
-    background-color: white;
     padding: 20px;
-    box-sizing: border-box;
-    margin: 20px 0;
-    border-top: 3px solid #e4836b;
     height: 228px;
+    margin: 20px 0;
 }
 
 .left {
@@ -73,9 +89,9 @@ label {
     text-align: center;
     height: 380px;
     overflow: hidden;
-    background-image: url(/images/drone.jpeg);
+    background-image: url(/images/hills.jpg);
     background-size: cover;
-    background-position: 0 50%;
+    background-position: 0 15%;
     box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
     border-bottom: 10px solid #e4836b;
 }
@@ -88,6 +104,13 @@ label {
 
 header {
     position: absolute;
+    background-color: #3a3636;
+    border-bottom: 10px solid #e4836b;
+}
+
+.home header {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom: none;
 }
 
 .header {
@@ -145,8 +168,15 @@ header {
     margin: 0 auto;
 }
 
-.article .content {
-    padding-bottom: 0;
+.with-sidebar .content {
+    padding: 0 20px;
+    float: left;
+}
+
+.article .wrapper.with-sidebar {
+    width: 860px;
+    padding-top: 80px;
+    margin: 0 auto;
 }
 
 .half.right h3 {
@@ -191,8 +221,11 @@ select, input {
 
 input {
     color: #95a1b2;
-    min-width: 182px;
     border-bottom: 1px solid #fafbfd;
+}
+
+.home input {
+    width: 182px;
 }
 
 input + .btn,
@@ -365,13 +398,6 @@ select:focus, input:focus {
     width: calc(100% - 135px);
 }
 
-.article header,
-.gigs header,
-.classes header {
-    background-color: #3a3636;
-    border-bottom: 10px solid #e4836b;
-}
-
 .article-body {
     font-family: 'Spectral', serif;
     font-size: 16px;
@@ -452,6 +478,22 @@ footer .content {
     font-style: italic;
 }
 
+.attribution-links {
+    background-color: white;
+    padding: 5px 10px 7px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.attribution-links a {
+    color: gray;
+}
+
+.attribution-links img {
+    margin-bottom: -3px;
+    height: 14px;
+}
+
 .success {
     color: #24a742;
     padding-bottom: 15px;
@@ -477,6 +519,8 @@ footer .content {
     outline: none;
     cursor: pointer;
     background: none;
+    width: 27px;
+    height: 24px;
 }
 
 .menu {
@@ -543,7 +587,7 @@ footer .content {
     right: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 860px) {
 
     .mobile {
         display: block;
@@ -555,6 +599,16 @@ footer .content {
 
     .half {
         width: 100%;
+    }
+
+    .with-sidebar .content {
+        padding: 60px 44px 60px 20px;
+        float: none;
+    }
+
+    .article .wrapper.with-sidebar {
+        width: auto;
+        padding-top: 0;
     }
 
 }

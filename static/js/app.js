@@ -18,15 +18,19 @@ $('.select-state', el => {
 
 });
 
-$('.search-btn').onclick = e => {
+$('.search-btn', el => {
 
-    const path = e.target.getAttribute('data-path');
+    el.onclick = e => {
 
-    const state = e.target.previousElementSibling.value;
+        const path = e.target.getAttribute('data-path');
 
-    window.location = path + (state === 'all' ? '' : '/' + state);
+        const state = e.target.previousElementSibling.value;
 
-};
+        window.location = path + (state === 'all' ? '' : '/' + state);
+
+    };
+
+});
 
 function selectState(s) {
 

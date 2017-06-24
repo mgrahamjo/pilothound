@@ -19,7 +19,7 @@ const config = state => {
         },
         [constants.onlineClassesUrl]: {
             data: () => db.coursesOnline(),
-            slug: 'All Online Drone Pilot Training Programs',
+            slug: 'All Online UAV Pilot Training Programs',
             canonical: constants.onlineClassesArticleUrl,
             isOnlineClassesPage: true,
             searchPath: constants.onlineClassesUrl
@@ -36,14 +36,16 @@ const config = state => {
             slug: 'All Drone Pilot Jobs',
             canonical: constants.gigsArticleUrl,
             isGigsPage: true,
-            searchPath: constants.gigsUrl
+            searchPath: constants.gigsUrl,
+            sidebar: true
         },
         [constants.classesArticleUrl]: {
             article: require('../content/local-training'),
             data: db.coursesOffline,
             slug: 'In-person UAV Training Programs',
             canonical: constants.classesArticleUrl,
-            searchPath: constants.classesUrl
+            searchPath: constants.classesUrl,
+            sidebar: true
         },
         [constants.onlineClassesArticleUrl]: {
             article: require('../content/online-classes'),
@@ -51,14 +53,16 @@ const config = state => {
             slug: 'All Online Drone Pilot Classes',
             canonical: constants.onlineClassesArticleUrl,
             isOnlineClassesPage: true,
-            searchPath: constants.onlineClassesUrl
+            searchPath: constants.onlineClassesUrl,
+            sidebar: true
         },
         [constants.part107ArticleUrl]: {
             article: require('../content/part-107'),
             data: db.prepCourses,
             slug: 'Part 107 Remote Pilot Test Prep Courses',
             canonical: constants.part107ArticleUrl,
-            searchPath: constants.part107Url
+            searchPath: constants.part107Url,
+            sidebar: true
         }
     };
 };

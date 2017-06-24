@@ -29,6 +29,10 @@ sqlite.open('../pilothound-db/pilothound.db').then(() => {
 
     app.get('/about', page);
 
+    app.get('/privacy', page);
+
+    app.get('/terms', page);
+
     app.get(`${constants.gigsUrl}/:state?`, article);
 
     app.get(`${constants.classesUrl}/:state?`, article);

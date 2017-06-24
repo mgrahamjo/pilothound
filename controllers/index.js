@@ -5,7 +5,8 @@ module.exports = (req, res) => {
         key: new Buffer(process.env.GOOGLE_KEY).toString('base64'),
         canonical: '',
         state: 'all',
-        success: req.body && req.body.email
+        success: req.body && req.body.email,
+        bodyClass: 'home'
     });
 
 };

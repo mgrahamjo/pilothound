@@ -22,6 +22,8 @@ module.exports = opts => {
 
         data.article = opts.article;
 
+        data.sidebar = opts.sidebar;
+
         opts.res.render(opts.view, data);
 
     });

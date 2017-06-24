@@ -13,7 +13,7 @@ const slugs = {
 module.exports = (req, res) => {
 
     res.render('page', {
-        bodyClass: 'article',
+        bodyClass: '',
         content: content[req.path],
         slug: slugs[req.path]
     });

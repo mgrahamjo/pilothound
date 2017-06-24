@@ -3,19 +3,6 @@
     <h1>Launch Your Drone Pilot Career</h1>
 </div>
 <div class="wrapper">
-    <div class="content center">
-        <h2>Find a Drone Pilot Job Near You</h2>
-        <p class="full-width">
-            <img src="/images/drone-icon.png" width="70" style="margin: 10px"/>
-        </p>
-        <label>Select your state:</label>
-        <div class="select">
-            <:include inc/select-state:>
-            <div class="btn left search-btn" data-path="/jobs">GO</div>
-        </div>
-    </div>
-</div>
-<div class="wrapper gray">
     <div class="content center clear">
         <h2>UAV Pilot Training Programs</h2>
         <div class="half left">
@@ -35,6 +22,19 @@
             </p>
             <h3>Online Programs</h3>
             <a class="btn" href="/online-drone-classes">FIND ONLINE PROGRAMS</a>
+        </div>
+    </div>
+</div>
+<div class="wrapper gray">
+    <div class="content center">
+        <h2>Find a Drone Pilot Job Near You</h2>
+        <p class="full-width">
+            <img src="/images/drone-icon.png" width="70" style="margin: 10px"/>
+        </p>
+        <label>Select your state:</label>
+        <div class="select">
+            <:include inc/select-state:>
+            <div class="btn left search-btn" data-path="/jobs">GO</div>
         </div>
     </div>
 </div>

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
     <link rel="canonical" href="https://pilothound.com<:canonical:>" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
 <body class="<:bodyClass:>">
 <header class="header">
