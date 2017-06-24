@@ -197,6 +197,8 @@ select, input {
     padding: 4px;
     float: left;
     padding: 11px;
+    height: 38px;
+    box-sizing: border-box;
 }
 
 .input,

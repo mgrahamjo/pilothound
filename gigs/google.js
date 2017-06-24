@@ -1,5 +1,5 @@
 const request = require('./util/request'),
-    states = require('./util/states'),
+    craigslistStates = require('./util/craigslist-states'),
     serialize = require('./util/serialize'),
     params = {
         key: process.env.GOOGLE_KEY,
@@ -29,7 +29,7 @@ function getGigs(callback) {
                 return {
                     title: gig.title,
                     source: 'Craigslist',
-                    state: states[gig.displayLink.split('.')[0]],
+                    state: craigslistStates[gig.displayLink.split('.')[0]],
                     snippet: gig.snippet.replace(/\\n/g, ''),
                     url: gig.link
                 };

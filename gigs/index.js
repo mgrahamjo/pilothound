@@ -13,7 +13,7 @@ indeed()
     .then(army)
     .then(gigs => {
 
-        const originalLength = gigs.indeed.length + gigs.google.length + gigs.glassdoor.length + gigs.static.length;
+        const originalLength = gigs.indeed.length + gigs.google.length + gigs.glassdoor.length;
 
         const dynamicGigs = interlace([gigs.indeed, gigs.google, gigs.glassdoor]).filter(gig => {
 
@@ -21,7 +21,7 @@ indeed()
 
         });
 
-        console.log(`Filtered out ${originalLength - gigs.length} gigs.`);
+        console.log(`Filtered out ${originalLength - dynamicGigs.length} gigs.`);
 
         if (dynamicGigs.length > 100) {
 

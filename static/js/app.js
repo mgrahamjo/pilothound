@@ -121,7 +121,7 @@ if (window.location.pathname === '/') {
 
             window.requestAnimationFrame(() => {
 
-                hero.style.height = 380 - window.pageYOffset / 4 + 'px';
+                hero.style.height = 380 - parseInt(window.pageYOffset / 4) + 'px';
 
             });
 

@@ -6,7 +6,7 @@ const config = state => {
     return {
         [constants.gigsUrl]: {
             data: state ? () => db.gigsInState(state) : () => db.gigs(),
-            slug: state ? `Drone Pilot Jobs in ${state}` : 'All Drone Pilot Jobs',
+            slug: state ? `Drone Industry Jobs in ${state}` : 'Jobs in the Drone Industry',
             canonical: constants.gigsArticleUrl,
             isGigsPage: true,
             searchPath: constants.gigsUrl
@@ -33,7 +33,7 @@ const config = state => {
         [constants.gigsArticleUrl]: {
             article: require('../content/jobs'),
             data: db.gigs,
-            slug: 'All Drone Pilot Jobs',
+            slug: 'Jobs for Drone Pilots and UAV Experts',
             canonical: constants.gigsArticleUrl,
             isGigsPage: true,
             searchPath: constants.gigsUrl,
@@ -69,7 +69,7 @@ const config = state => {
 
 module.exports = (req, res) => {
 
-    const state = req.params.state ? req.params.state.toUpperCase() : undefined,
+    const state = req.params.state ? req.params.state.toUpperCase() : '',
         basePath = '/' + req.path.split('/')[1];
 
     return base(Object.assign({

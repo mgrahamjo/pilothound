@@ -4,7 +4,7 @@ module.exports = opts => {
 
     opts.data().then(items => {
 
-        const data = paginate(opts.req, items, opts.searchPath);
+        const data = paginate(opts.req, items, opts.searchPath + '/' + opts.state);
 
         data.slug = opts.slug;
 
