@@ -21,7 +21,7 @@ module.exports = {
     gigsInState: state => sql(`
         SELECT ${GIG_FIELDS} FROM gig
         LEFT JOIN state_gig 
-        ON gig.id=state_gig.gig_id
+            ON gig.id=state_gig.gig_id
         WHERE state IS "${escape(state)}"
     `),
 
