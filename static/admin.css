@@ -1,0 +1,137 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 12px;
+    background: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: #4192fd;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+a:hover {
+    color: #5da3ff;
+}
+
+header {
+    padding: 13px 3px;
+    background-color: #ececec;
+}
+
+header a, button {
+    text-decoration: none;
+    background-color: #4192fd;
+    color: white;
+    padding: 10px 12px;
+}
+
+header a:hover, button:hover {
+    background-color: #5da3ff;
+    color: white;
+}
+
+header a.active {
+    background-color: whitesmoke;
+    color: #4192fd;
+    font-weight: bold;
+    border-bottom: 3px solid whitesmoke;
+}
+
+button {
+    border: none;
+    font-family: 'Montserrat';
+    width: 50%;
+    margin-left: 107px;
+    font-size: 10pt;
+    cursor: pointer;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wrapper {
+    text-align: center;
+    overflow: scroll;
+}
+
+.cell {
+    max-height: 30px;
+    overflow: hidden;
+    margin: 4px 2px;
+}
+
+.cell-url {
+    max-width: 210px;
+}
+
+th {
+    padding: 10px 0;
+}
+
+tr {
+    background-color: #ececec;
+}
+
+tr:nth-child(2n) {
+    background-color: #e4e4e4;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background-color: #5da3ff;
+}
+
+tbody tr:hover td {
+    border-right: 1px solid #5da3ff;
+}
+
+thead tr {
+    background-color: #d8d8d8;
+}
+
+td, th {
+    border-right: 1px solid #d8d8d8;
+}
+
+form div {
+    padding: 10px;
+}
+
+label {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 6px;
+    color: gray;
+}
+
+input, textarea, select {
+    padding: 6px;
+    font-family: 'Montserrat';
+    width: 50%;
+    border: 1px solid #eaeaea;
+}
+
+textarea, select {
+    height: 100px;
+}
+
+form {
+    padding: 0 0 30px;
+}

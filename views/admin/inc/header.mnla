@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <title>PilotHound-db</title>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header class="header">
+    <a href="/admin" class="<: path === '/admin' ? 'active' : '' :>">Home</a>
+    <a href="/admin/schools" class="<: path === '/admin/schools' ? 'active' : '' :>">Schools</a>
+    <a href="/admin/courses" class="<: path === '/admin/courses' ? 'active' : '' :>">Courses</a>
+</header>

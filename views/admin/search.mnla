@@ -1,0 +1,37 @@
+<:include admin/inc/header:>
+<div class="wrapper">
+    <h1><: h1 :></h1>
+    <p><a href="<:path:>/new">+ Add new</a></p>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <: columns.forEach(column => { :>
+                    <th><: column :></th>
+                <: }) :>
+            </tr>
+        </thead>
+        <tbody>
+            <: rows.forEach(row => { :>
+                <tr>
+                    <: row.forEach(cell => { :>
+                        <td>
+                            <div class="cell cell-<: cell.key :>"><: cell.value :></div>
+                        </td>
+                    <: }) :>
+                </tr>
+            <: }) :>
+        </tbody>
+    </table>
+</div>
+<script>
+    [].slice.call(document.querySelectorAll('tr')).forEach(tr => {
+
+        tr.onclick = function(e) {
+
+            window.location += '/' + e.currentTarget.firstElementChild.firstElementChild.innerText;
+
+        };
+
+    });
+</script>
+<:include admin/inc/footer:>

@@ -12,4 +12,4 @@ App runs on localhost:8000.
 
 ### Deploy
 
-From the production server: `sudo . deploy.sh`
+From the production server: `sudo sh deploy.sh`

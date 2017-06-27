@@ -1,0 +1,9 @@
+<:include admin/inc/header:>
+<div class="wrapper">
+    <h1>Hi.</h1>
+    <p><a href="/admin/schools">Search Schools</a></p>
+    <p><a href="/admin/schools/new">Add a School</a></p>
+    <p><a href="/admin/courses">Search Courses</a></p>
+    <p><a href="/admin/courses/new">Add a Course</a></p>
+</div>
+<:include admin/inc/footer:>

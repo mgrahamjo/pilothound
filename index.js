@@ -25,6 +25,8 @@ sqlite.open('../pilothound-db/pilothound.db').then(() => {
 
     app.set('views', './views');
 
+    // App controllers
+
     app.get('/', require('./controllers/index'));
 
     app.get('/about', page);
@@ -50,6 +52,22 @@ sqlite.open('../pilothound-db/pilothound.db').then(() => {
     app.get(constants.part107ArticleUrl, article);
 
     app.post('/', newsletter);
+
+    // Admin controllers
+    
+    app.get('/admin', require('./controllers/admin/index'));
+
+    app.get('/admin/schools', require('./controllers/admin/schools'));
+
+    app.get('/admin/schools/:id?', require('./controllers/admin/edit-school'));
+
+    app.get('/admin/courses', require('./controllers/admin/courses'));
+
+    app.get('/admin/courses/:id?', require('./controllers/admin/edit-course'));
+
+    app.post('/admin/schools', require('./controllers/admin/post-school'));
+
+    app.post('/admin/courses', require('./controllers/admin/post-course'));
 
     app.listen(8000);
 

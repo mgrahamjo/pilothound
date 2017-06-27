@@ -1,0 +1,11 @@
+<:include admin/inc/header:>
+<div class="wrapper">
+    <h1><: h1 :></h1>
+    <form action="<: path :>" method="post">
+        <: fields.forEach(field => { :>
+            <:: field ::>
+        <: }) :>
+        <button type="submit">Save</button>
+    </form>
+</div>
+<:include admin/inc/footer:>
