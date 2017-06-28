@@ -8,6 +8,6 @@ module.exports = (req, res) => {
 
     data.online = data.online ? '1' : '';
 
-    db.saveCourse(req.body).then(() => res.redirect('admin/courses'));
+    db.saveCourse(req.body).then(() => res.redirect('courses'));
 
 };

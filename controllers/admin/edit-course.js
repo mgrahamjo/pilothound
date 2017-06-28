@@ -54,7 +54,8 @@ module.exports = (req, res) => {
                 field('headline'),
                 field('description'),
                 field('features'),
-                field('level')
+                field('level'),
+                field('states', [])
             ]
         });
 

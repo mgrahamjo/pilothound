@@ -8,6 +8,6 @@ module.exports = (req, res) => {
 
     data.online = data.online ? '1' : '';
 
-    db.saveSchool(data).then(() => res.redirect('admin/schools'));
+    db.saveSchool(data).then(() => res.redirect('schools'));
 
 };
