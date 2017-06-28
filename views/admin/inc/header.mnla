@@ -15,4 +15,5 @@
     <a href="/admin" class="<: path === '/admin' ? 'active' : '' :>">Home</a>
     <a href="/admin/schools" class="<: path === '/admin/schools' ? 'active' : '' :>">Schools</a>
     <a href="/admin/courses" class="<: path === '/admin/courses' ? 'active' : '' :>">Courses</a>
+    <a href="/admin/blog" class="<: path === '/admin/blog' ? 'active' : '' :>">Blog</a>
 </header>

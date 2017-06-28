@@ -5,5 +5,7 @@
     <p><a href="/admin/schools/new">Add a School</a></p>
     <p><a href="/admin/courses">Search Courses</a></p>
     <p><a href="/admin/courses/new">Add a Course</a></p>
+    <p><a href="/admin/blog">Search Blog Posts</a></p>
+    <p><a href="/admin/blog/new">Add a Blog Post</a></p>
 </div>
 <:include admin/inc/footer:>

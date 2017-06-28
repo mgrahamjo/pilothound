@@ -77,6 +77,10 @@ button {
     max-width: 210px;
 }
 
+table {
+    display: inline-block;
+}
+
 th {
     padding: 10px 0;
 }
@@ -119,6 +123,13 @@ label {
     text-align: right;
     padding-right: 6px;
     color: gray;
+    vertical-align: top;
+    padding-top: 6px;
+}
+
+label + input[type="checkbox"] {
+    position: relative;
+    top: 5px;
 }
 
 input, textarea, select {

@@ -58,16 +58,16 @@ sqlite.open('../pilothound-db/pilothound.db').then(() => {
     app.get('/admin', require('./controllers/admin/index'));
 
     app.get('/admin/schools', require('./controllers/admin/schools'));
-
     app.get('/admin/schools/:id?', require('./controllers/admin/edit-school'));
-
-    app.get('/admin/courses', require('./controllers/admin/courses'));
-
-    app.get('/admin/courses/:id?', require('./controllers/admin/edit-course'));
-
     app.post('/admin/schools', require('./controllers/admin/post-school'));
 
+    app.get('/admin/courses', require('./controllers/admin/courses'));
+    app.get('/admin/courses/:id?', require('./controllers/admin/edit-course'));
     app.post('/admin/courses', require('./controllers/admin/post-course'));
+
+    app.get('/admin/blog', require('./controllers/admin/blog'));
+    app.get('/admin/blog/:file?', require('./controllers/admin/edit-blog'));
+    app.post('/admin/blog', require('./controllers/admin/post-blog'));
 
     app.listen(8000);
 
