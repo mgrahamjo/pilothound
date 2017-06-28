@@ -9,15 +9,6 @@ module.exports = () => {
     exec('git', ['add', '-A']).then(() => 
 
         exec('git', ['commit', '-m', 'Auto backup ' + new Date().toJSON().substring(0, 10)])
-            .then(code => {
-
-                if (code === 0) {
-
-                    exec('git', ['push']);
-
-                }
-
-            })
 
     );
 
