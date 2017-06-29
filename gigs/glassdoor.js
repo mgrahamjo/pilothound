@@ -55,7 +55,7 @@ function getGigs(callback) {
 
             } else {
 
-                getGigs(callback);
+                setTimeout(() => getGigs(callback), 2000);
 
             }
 
