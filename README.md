@@ -10,6 +10,10 @@
 
 App runs on localhost:8000.
 
+### Build
+
+From the production server: `sudo sh bin/build.sh`
+
 ### Deploy
 
-From the production server: `sudo sh bin/deploy.sh`
+From the production server: `sudo pm2 restart pilothound`
