@@ -2,15 +2,16 @@
 <html lang="en-US">
 <head>
     <title>PilotHound | <:slug:></title>
-    <meta charset="UTF-8">
-    <meta name="google" content="notranslate">
-    <meta http-equiv="Content-Language" content="en">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" rel="stylesheet" href="/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
-    <link rel="canonical" href="https://pilothound.com<:canonical:>" />
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8"/>
+    <meta name="google" content="notranslate"/>
+    <meta http-equiv="Content-Language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="<:description:>"/>
+    <link type="text/css" rel="stylesheet" href="/dist/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet"/>
+    <link rel="canonical" href="https://pilothound.com<:canonical:>"/>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
 </head>
 <body class="<:bodyClass:>">
 <header class="header">

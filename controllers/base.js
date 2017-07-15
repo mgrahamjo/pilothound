@@ -24,6 +24,8 @@ module.exports = opts => {
 
         data.sidebar = opts.sidebar;
 
+        data.description = opts.description;
+
         opts.res.render(opts.view, data);
 
     });

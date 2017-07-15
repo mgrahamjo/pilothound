@@ -6,7 +6,7 @@ const content = {
 
 const slugs = {
     '/about': 'About PilotHound',
-    '/privacy': 'Privacy Policy',
+    '/privacy': 'PilotHound Privacy Policy',
     '/terms': 'Terms of Service'
 };
 

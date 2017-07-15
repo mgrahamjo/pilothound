@@ -7,9 +7,9 @@
         <h2>UAV Pilot Training Programs</h2>
         <div class="half left">
             <p class="full-width">
-                <img src="/images/school-icon.png" width="66"/>
+                <img src="/images/school-icon.png" alt="school icon" width="66"/>
             </p>
-            <h3>Local Programs</h3>
+            <h3>Programs Near You</h3>
             <label>Select your state:</label>
             <div class="select">
                 <:include inc/select-state:>
@@ -18,7 +18,7 @@
         </div>
         <div class="half right">
             <p class="full-width">
-                <img src="/images/computer-icon.png" width="70"/>
+                <img src="/images/computer-icon.png" alt="computer icon" width="70"/>
             </p>
             <h3>Online Programs</h3>
             <a class="btn" href="/online-drone-classes">FIND ONLINE PROGRAMS</a>
@@ -29,7 +29,7 @@
     <div class="content center">
         <h2>Find a Drone Pilot Job Near You</h2>
         <p class="full-width">
-            <img src="/images/drone-icon.png" width="70" style="margin: 10px"/>
+            <img src="/images/drone-icon.png" alt="drone icon" width="70" style="margin: 10px"/>
         </p>
         <label>Select your state:</label>
         <div class="select">
@@ -40,7 +40,7 @@
 </div>
 <div class="wrapper">
     <div class="content center">
-        <img class="right desktop" src="/images/email.png" style="margin: 14px 53px 0 -37px"/>
+        <img class="right desktop" src="/images/email.png" alt="email icon" style="margin: 14px 53px 0 -37px"/>
         <h2 class="leads-h2">Get job leads in your inbox</h2>
         <a name="success"></a>
         <: if (success) { :>

@@ -23,13 +23,13 @@ indeed()
 
         console.log(`Filtered out ${originalLength - dynamicGigs.length} gigs.`);
 
-        if (dynamicGigs.length > 100) {
+        if (dynamicGigs.length > 200) {
 
             save(dynamicGigs.concat(gigs.static));
 
         } else {
 
-            console.log('Aborting: fewer than 100 gigs found.');
+            console.log('Aborting: not enough gigs found.');
 
         }
 

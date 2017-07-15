@@ -6,7 +6,8 @@ module.exports = (req, res) => {
         canonical: '',
         state: 'all',
         success: req.body && req.body.email,
-        bodyClass: 'home'
+        bodyClass: 'home',
+        description: 'Browse drone pilot job listings, online drone courses, and local UAV training classes with the web\'s most comprehensive database for aspiring UAV professionals.'
     });
 
 };
