@@ -4,28 +4,38 @@ const indeed = require('./indeed'),
     dronebase = require('./dronebase'),
     army = require('./army'),
     interlace = require('interlace-arrays'),
-    save = require('./save');
+    save = require('./save'),
+    careerbuilder = require('./careerbuilder'),
+    amazon = require('./amazon');
 
 indeed()
     .then(glassdoor)
+    .then(careerbuilder)
+    .then(amazon)
     .then(google)
     .then(dronebase)
     .then(army)
     .then(gigs => {
 
-        const originalLength = gigs.indeed.length + gigs.google.length + gigs.glassdoor.length;
+        let dynamicGigs = interlace([
+            gigs.indeed, 
+            gigs.glassdoor,
+            gigs.careerbuilder,
+            gigs.amazon,
+            gigs.google
+        ]);
 
-        const dynamicGigs = interlace([gigs.indeed, gigs.google, gigs.glassdoor]).filter(gig => {
+        const originalLength = dynamicGigs.length;
 
-            return (gig.title + gig.snippet).match(/(drone|uav|aerial|pilot)/i);
-
-        });
+        dynamicGigs = dynamicGigs.filter(gig => (gig.title + gig.snippet).match(/(drone|uav|aerial|pilot)/i));
 
         console.log(`Filtered out ${originalLength - dynamicGigs.length} gigs.`);
 
-        if (dynamicGigs.length > 200) {
+        const allGigs = dynamicGigs.concat(gigs.static);
 
-            save(dynamicGigs.concat(gigs.static));
+        if (allGigs.length > 300) {
+
+            save(allGigs);
 
         } else {
 
