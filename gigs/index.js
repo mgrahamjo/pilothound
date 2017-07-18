@@ -1,5 +1,4 @@
 const indeed = require('./indeed'),
-    google = require('./google'),
     glassdoor = require('./glassdoor'),
     dronebase = require('./dronebase'),
     army = require('./army'),
@@ -12,7 +11,6 @@ indeed()
     .then(glassdoor)
     .then(careerbuilder)
     .then(amazon)
-    .then(google)
     .then(dronebase)
     .then(army)
     .then(gigs => {
@@ -21,8 +19,7 @@ indeed()
             gigs.indeed, 
             gigs.glassdoor,
             gigs.careerbuilder,
-            gigs.amazon,
-            gigs.google
+            gigs.amazon
         ]);
 
         const originalLength = dynamicGigs.length;
@@ -33,7 +30,7 @@ indeed()
 
         const allGigs = dynamicGigs.concat(gigs.static);
 
-        if (allGigs.length > 300) {
+        if (allGigs.length > 350) {
 
             save(allGigs);
 
