@@ -24,7 +24,14 @@ indeed()
 
         const originalLength = dynamicGigs.length;
 
-        dynamicGigs = dynamicGigs.filter(gig => (gig.title + gig.snippet).match(/(drone|uav|aerial|pilot)/i));
+        dynamicGigs = dynamicGigs.filter(gig => {
+
+            const content = gig.title + gig.snippet;
+
+            return content.match(/(drone|uav|aerial|pilot)/i)
+                && !content.match(/software\s(engineer|developer)/i);
+
+        });
 
         console.log(`Filtered out ${originalLength - dynamicGigs.length} gigs.`);
 
