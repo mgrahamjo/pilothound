@@ -6,8 +6,16 @@ module.exports = data => new Promise((resolve, reject) => {
 
     request({
         host: 'www.careerbuilder.com',
-        path: '/jobs-uav',
-        method: 'GET'
+        path: '/jobs-drone-pilot',
+        method: 'GET',
+        headers: {
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+            'Accept-Encoding': 'deflate',
+            'Accept-Language': 'en-US,en;q=0.8',
+            'Cache-Control': 'no-cache',
+            'Host': 'www.careerbuilder.com',
+            'Pragma': 'no-cache'
+        }
     }).then(response => {
 
         const $ = cheerio.load(response);
