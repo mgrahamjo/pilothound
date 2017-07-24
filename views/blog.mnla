@@ -1,0 +1,18 @@
+<:include inc/header:>
+<div class="hero">
+    <h1>The PilotHound Blog</h1>
+</div>
+<div class="wrapper clear with-sidebar">
+    <: include inc/sidebar :>
+    <div class="content">
+        <h2>All Posts:</h2>
+        <: posts.forEach(post => { :>
+            <a class="result gig clear" href="/blog/<:post.url:>">
+                <div class="result-title"><:post.title:></div>
+                <div class="result-source"><:post.date:></div>
+                <p><::post.snippet::>...</p>
+            </a>
+        <: }) :>
+    </div>
+</div>
+<:include inc/footer:>

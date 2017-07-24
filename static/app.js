@@ -42,7 +42,7 @@ function selectState(s) {
 
 }
 
-if (window.location.pathname === '/') {
+if (window.location.pathname === '/' || window.location.pathname === '/blog') {
 
     function fail() {
 

@@ -1,0 +1,13 @@
+<:include inc/header:>
+<div class="hero">
+    <h1><:title:></h1>
+    <p class="post-date"><:date:></p>
+</div>
+<div class="wrapper clear">
+    <div class="content">
+        <div class="post article-body">
+            <::body::>
+        </div>
+    </div>
+</div>
+<:include inc/footer:>

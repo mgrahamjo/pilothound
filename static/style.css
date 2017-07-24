@@ -589,6 +589,14 @@ footer .content {
     right: 0;
 }
 
+.post-date {
+    color: white;
+    font-family: 'Spectral', serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    font-size: 12pt;
+    opacity: 0.8;
+}
+
 @media (max-width: 860px) {
 
     .mobile {

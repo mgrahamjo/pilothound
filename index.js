@@ -7,7 +7,9 @@ const express = require('express'),
     constants = require('./util/constants'),
     db = require('./util/db'),
     newsletter = require('./controllers/newsletter'),
-    page = require('./controllers/page');
+    page = require('./controllers/page'),
+    blog = require('./controllers/blog'),
+    post = require('./controllers/post');
 
 sqlite.open('../pilothound-db/pilothound.db').then(() => {
 
@@ -34,6 +36,10 @@ sqlite.open('../pilothound-db/pilothound.db').then(() => {
     app.get('/privacy', page);
 
     app.get('/terms', page);
+
+    app.get('/blog', blog);
+
+    app.get('/blog/:post', post);
 
     app.get(`${constants.gigsUrl}/:state?`, article);
 
