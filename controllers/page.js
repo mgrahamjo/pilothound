@@ -15,7 +15,8 @@ module.exports = (req, res) => {
     res.render('page', {
         bodyClass: '',
         content: content[req.path],
-        slug: slugs[req.path]
+        slug: slugs[req.path],
+        cacheBust: Date.now()
     });
 
 };

@@ -26,6 +26,8 @@ module.exports = opts => {
 
         data.description = opts.description;
 
+        data.cacheBust = Date.now();
+
         opts.res.render(opts.view, data);
 
     });

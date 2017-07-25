@@ -18,7 +18,8 @@ module.exports = (req, res) => {
             slug: post.title,
             title: post.title,
             date: new Date(post.date).toDateString(),
-            body: post.body
+            body: post.body,
+            cacheBust: Date.now()
         });
 
     });

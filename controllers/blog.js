@@ -29,7 +29,8 @@ module.exports = (req, res) => {
             canonical: '/blog',
             slug: 'News, Tips, and Insights for Drone Pilots',
             state: 'all',
-            description: 'The PilotHound blog is a resource for current and aspiring professionals in the UAV industry. Tune in regularly to catch our bi-monthly posts.'
+            description: 'The PilotHound blog is a resource for current and aspiring professionals in the UAV industry. Tune in regularly to catch our bi-monthly posts.',
+            cacheBust: Date.now()
         });
 
     });
