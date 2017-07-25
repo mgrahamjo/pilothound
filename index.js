@@ -1,4 +1,5 @@
-const express = require('express'),
+const fs = require('fs'),
+    express = require('express'),
     app = express(),
     manila = require('manila')(),
     sqlite = require('sqlite'),
@@ -10,6 +11,8 @@ const express = require('express'),
     page = require('./controllers/page'),
     blog = require('./controllers/blog'),
     post = require('./controllers/post');
+
+app.locals.cacheBust = fs.readFileSync('./.cachebust').toString();
 
 sqlite.open('../pilothound-db/pilothound.db').then(() => {
 

@@ -12,26 +12,38 @@ module.exports = (req, res) => {
 
         }
 
-        res.render('blog', {
-            posts: files.map(file => {
-                // TODO: Promise.all
-                const post = JSON.parse(fs.readFileSync('content/blog/' + file));
+        Promise.all(files.map(file => new Promise((resolve, reject) => {
 
-                return {
-                    title: post.title,
-                    url: file.replace('.json', ''),
-                    date: new Date(post.date).toDateString(),
-                    snippet: post.body.substring(3, 190).replace(/(<\/?p>)/g, ' ')
-                };
+            fs.readFile('content/blog/' + file, (e, data) => {
 
-            }),
-            bodyClass: 'article',
-            canonical: '/blog',
-            slug: 'News, Tips, and Insights for Drone Pilots',
-            state: 'all',
-            description: 'The PilotHound blog is a resource for current and aspiring professionals in the UAV industry. Tune in regularly to catch our bi-monthly posts.',
-            cacheBust: Date.now()
-        });
+                if (e) {
+
+                    return reject();
+
+                }
+
+                const post = JSON.parse(data.toString());
+
+                post.url = file.replace('.json', '');
+                post.date = new Date(post.date).toDateString();
+                post.snippet = post.body.substring(3, 190).replace(/(<\/?p>)/g, ' ');
+
+                resolve(post);
+
+            });
+
+        }))).then(posts => {
+
+            res.render('blog', {
+                posts,
+                bodyClass: 'article',
+                canonical: '/blog',
+                slug: 'News, Tips, and Insights for Drone Pilots',
+                state: 'all',
+                description: 'The PilotHound blog is a resource for current and aspiring professionals in the UAV industry. Tune in regularly to catch our bi-monthly posts.'
+            });
+
+        }).catch(e => console.error(e));
 
     });
 
