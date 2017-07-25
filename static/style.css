@@ -144,6 +144,10 @@ header {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+.header .right.desktop {
+    padding-right: 10px;
+}
+
 .btn {
     display: inline-block;
     padding: 12px;
